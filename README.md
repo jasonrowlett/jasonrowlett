@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @jasonrowlett
-- 👀 I’m interested in ... building APIs + API mashups + licensing them.
+- 👀 I’m interested in ... building APIs + API mashups.
 - 🌱 I’m currently learning ... API programming, endpoint management + languages/tools involved.
 - 📫 How to reach me ... Twitter @jasoniscoding 
 
