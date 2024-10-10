@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @jasonrowlett
 - 👀 I’m interested in ... building APIs + API mashups.
-- 🌱 I’m currently learning ... API programming, endpoint management + languages/tools involved.
-- 📫 How to reach me ... Twitter @jasoniscoding 
+- 🌱 I’m currently learning ... API programming + endpoint management.
+- 📫 jay@foretoken.co... X: @jaycryptogeld 
 
 <!---
 jasonrowlett/jasonrowlett is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
