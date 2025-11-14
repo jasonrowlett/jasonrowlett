@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Jason
 - 👀 I'm the Foretoken comparison market data dashboard for real-world assets (RWA) tokens and trad assets.
 - 🌱 I’m currently learning API programming + endpoint management.
-- 📫 jay@foretoken.co... X: @rowlettreport 
+- 📫 jason@foretoken.xyz... X: @rowlettreport 
 
 <!---
 jasonrowlett/jasonrowlett is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
