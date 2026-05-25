@@ -1,0 +1,229 @@
+{
+  "macroBanner": "MACRO SIGNAL — Fed held at 4.25–4.50% in May 2026 · Treasury yields stabilizing · USD weakening vs. EM basket · Tokenized RWA TVL: $68.4B · Shipping indices elevated · Agricultural commodity volatility: HIGH",
+  "lastUpdated": "May 2026",
+
+  "sectors": [
+    {
+      "id": "tokenized-treasuries",
+      "name": "Tokenized Treasuries",
+      "category": "Sovereign / Fixed Income",
+      "rating": "AA",
+      "outlook": "stable",
+      "rationale": "Sovereign collateral and rate normalization produce the sector's strongest risk-adjusted profile."
+    },
+    {
+      "id": "trade-finance",
+      "name": "Trade Finance",
+      "category": "Short-Duration Credit",
+      "rating": "A−",
+      "outlook": "stable",
+      "rationale": "Short-duration receivables with institutional origination present manageable credit risk."
+    },
+    {
+      "id": "private-credit",
+      "name": "Private Credit",
+      "category": "Credit / Lending",
+      "rating": "BBB+",
+      "outlook": "negative",
+      "rationale": "Rapid on-chain expansion has outpaced underwriting transparency across key protocols."
+    },
+    {
+      "id": "real-estate",
+      "name": "Real Estate",
+      "category": "Real Assets",
+      "rating": "BBB−",
+      "outlook": "negative",
+      "rationale": "Elevated rates and PMM-dependent liquidity models create structural fragility."
+    },
+    {
+      "id": "tokenized-equities",
+      "name": "Tokenized Equities",
+      "category": "Equity / SPV",
+      "rating": "BBB",
+      "outlook": "stable",
+      "rationale": "Offshore SPV architecture introduces enforceability risk not present in direct equity holdings."
+    },
+    {
+      "id": "precious-metals",
+      "name": "Precious Metals",
+      "category": "Commodities / Reserve Assets",
+      "rating": "BBB+",
+      "outlook": "stable",
+      "rationale": "Reserve-backed collateral provides strong credit floor; custody concentration is the primary risk."
+    },
+    {
+      "id": "infrastructure-debt",
+      "name": "Infrastructure Debt",
+      "category": "Infrastructure / Project Finance",
+      "rating": "BB+",
+      "outlook": "watch",
+      "rationale": "Emerging asset class with limited on-chain track record and high macro sensitivity."
+    },
+    {
+      "id": "trade-receivables",
+      "name": "Trade Receivables",
+      "category": "Receivables / EM Credit",
+      "rating": "BB+",
+      "outlook": "stable",
+      "rationale": "SME borrower concentration in emerging markets introduces meaningful default correlation risk."
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "category": "Commodities / Real Assets",
+      "rating": "BB−",
+      "outlook": "watch",
+      "rationale": "Commodity volatility, harvest-cycle liquidity mismatches, and thin origination infrastructure constrain the rating."
+    },
+    {
+      "id": "carbon-environmental",
+      "name": "Carbon & Environmental",
+      "category": "ESG / Registry Assets",
+      "rating": "B+",
+      "outlook": "watch",
+      "rationale": "Registry fragmentation, verification opacity, and political risk make this the sector's highest-uncertainty category."
+    }
+  ],
+
+  "watchlist": {
+    "downgrades": [
+      {
+        "name": "Real Estate Sector",
+        "change": "BBB → BBB−",
+        "note": "PMM liquidity stress and rate persistence"
+      },
+      {
+        "name": "Private Credit",
+        "change": "BBB+ → BBB+ (Neg outlook)",
+        "note": "Underwriting opacity flagged"
+      }
+    ],
+    "upgrades": [
+      {
+        "name": "Tokenized Treasuries",
+        "change": "AA− → AA",
+        "note": "Fed pause reduces duration risk"
+      },
+      {
+        "name": "Maple Finance",
+        "change": "BB+ → BBB−",
+        "note": "Overcollateralization discipline confirmed"
+      }
+    ],
+    "underReview": [
+      {
+        "name": "Carbon & Environmental Sector",
+        "note": "Registry standards review in progress"
+      },
+      {
+        "name": "Blocksquare Protocol",
+        "note": "Liquidity layer assessment ongoing"
+      }
+    ],
+    "liquidityWatch": [
+      {
+        "name": "Lofty (Real Estate)",
+        "note": "PMM yield sustainability under stress"
+      },
+      {
+        "name": "Goldfinch (Private Credit)",
+        "note": "TVL at $1.32M, withdrawal queue active"
+      }
+    ]
+  },
+
+  "dossiers": [
+    {
+      "id": "agriculture-initiation",
+      "title": "Tokenized Agriculture: Sector Initiation",
+      "sector": "Agriculture",
+      "date": "May 2026",
+      "lede": "Foretoken initiates coverage of tokenized agricultural assets with a BB− rating under elevated macro uncertainty.",
+      "isFree": true,
+      "href": "/dossiers/agriculture"
+    },
+    {
+      "id": "private-credit-stress-test",
+      "title": "Private Credit Stress Test: Q2 2026",
+      "sector": "Private Credit",
+      "date": "May 2026",
+      "lede": "Underwriting opacity and TVL contraction signal deteriorating sector fundamentals.",
+      "isFree": false,
+      "href": "#"
+    },
+    {
+      "id": "trade-finance-institutional",
+      "title": "Trade Finance: Institutional Origination Analysis",
+      "sector": "Trade Finance",
+      "date": "April 2026",
+      "lede": "Short-duration receivable protocols maintain structural integrity under current credit conditions.",
+      "isFree": false,
+      "href": "#"
+    },
+    {
+      "id": "macro-exposure-q2",
+      "title": "Macro Exposure Report: Q2 2026",
+      "sector": "Macro",
+      "date": "April 2026",
+      "lede": "Five macro vectors currently active across tokenized private market sectors.",
+      "isFree": false,
+      "href": "#"
+    }
+  ],
+
+  "macroExposures": [
+    {
+      "id": "interest-rates",
+      "label": "Interest Rates",
+      "status": "ELEVATED",
+      "tier": "red",
+      "note": "Fed funds rate held at 4.25–4.50%; long-end yields stabilizing.",
+      "detail": "The Federal Reserve maintained its target range at 4.25–4.50% following the May 2026 meeting, citing persistent services inflation and resilient labor markets. Long-duration tokenized assets face continued valuation pressure. Duration risk remains a primary factor in sector ratings for real estate and infrastructure debt."
+    },
+    {
+      "id": "shipping-indices",
+      "label": "Shipping Indices",
+      "status": "ELEVATED",
+      "tier": "red",
+      "note": "Baltic Dry Index elevated; container costs above 2024 baseline.",
+      "detail": "Global shipping costs remain elevated relative to 2024 baselines, driven by Red Sea route disruptions and port congestion in key EM hubs. Trade finance origination timelines have extended, and receivable cycle times for SME-focused protocols have increased materially. This is a secondary headwind for trade receivable ratings."
+    },
+    {
+      "id": "commodities",
+      "label": "Commodities",
+      "status": "VOLATILE",
+      "tier": "amber",
+      "note": "Agricultural commodity volatility elevated; metals range-bound.",
+      "detail": "Agricultural commodity prices have exhibited high volatility through Q2 2026, driven by El Niño-related weather disruptions in South America and Southeast Asia. Precious metals remain range-bound with gold serving as a credit floor for reserve-backed tokenized assets. The volatility backdrop is a primary driver of the BB− Agriculture sector rating."
+    },
+    {
+      "id": "fx-usd-em",
+      "label": "FX (USD/EM)",
+      "status": "WEAKENING",
+      "tier": "amber",
+      "note": "USD softening against EM basket; mixed impact by sector.",
+      "detail": "The US dollar has weakened approximately 4.2% against a basket of key emerging market currencies since January 2026. This is a net positive for USD-denominated EM borrowers (reduced repayment burden) but introduces FX mismatch risk for protocols with on-chain settlement in stablecoins pegged to USD. Mixed sector impact — favorable for trade finance, negative for real estate in USD-denominated markets."
+    },
+    {
+      "id": "credit-spreads",
+      "label": "Credit Spreads",
+      "status": "STABLE",
+      "tier": "green",
+      "note": "Investment-grade spreads stable; HY spreads slightly compressed.",
+      "detail": "Investment-grade credit spreads have remained stable in a 95–115bps range over the past 60 days. High-yield spreads have compressed modestly, reflecting risk-on positioning in traditional markets. This is broadly supportive for tokenized credit assets with institutional origination, though the compression may mask underlying deterioration in weaker protocols not captured by aggregate spread indices."
+    }
+  ],
+
+  "ratingScale": [
+    { "grade": "AAA", "definition": "Highest credit quality; minimal risk" },
+    { "grade": "AA", "definition": "Very high quality; very low risk" },
+    { "grade": "A", "definition": "High quality; low risk" },
+    { "grade": "BBB", "definition": "Good quality; moderate risk" },
+    { "grade": "BB", "definition": "Speculative; elevated risk" },
+    { "grade": "B", "definition": "Highly speculative; high risk" },
+    { "grade": "CCC", "definition": "Substantial risk; default possible" },
+    { "grade": "CC", "definition": "Very high risk; default likely" },
+    { "grade": "C", "definition": "Near default or in default" },
+    { "grade": "D", "definition": "In default" }
+  ]
+}
