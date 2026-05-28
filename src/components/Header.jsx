@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 export default function Header() {
   return (
@@ -16,7 +17,22 @@ export default function Header() {
           <Link to="/">Ratings</Link>
           <Link to="/">Intelligence</Link>
           <Link to="/">Methodology</Link>
-          <Link to="/subscribe" className="site-header__cta">Subscribe</Link>
+          <SignedOut>
+            <Link to="/login" style={{ fontSize: 12, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>Sign In</Link>
+            <Link to="/subscribe" className="site-header__cta">Subscribe</Link>
+          </SignedOut>
+          <SignedIn>
+            <Link to="/account" style={{ fontSize: 12, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>Account</Link>
+            <UserButton
+              afterSignOutUrl="/"
+              appearance={{
+                variables: { colorPrimary: '#B08A4A' },
+                elements: {
+                  avatarBox: { width: 28, height: 28 },
+                },
+              }}
+            />
+          </SignedIn>
         </nav>
       </div>
     </header>

@@ -1,30 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SignIn } from '@clerk/clerk-react';
 
-// Clerk <SignIn /> will replace this placeholder in the next build session
 export default function Login() {
   return (
     <div className="page-centered">
-      <div className="page-centered__card">
-        <div className="page-centered__eyebrow">Foretoken Concourse</div>
-        <h1 className="page-centered__title">Sign In</h1>
-        <p className="page-centered__sub">
-          Access your Concourse subscription, saved watchlists, and intelligence dossiers.
-        </p>
-
-        <button
-          className="btn-primary"
-          style={{ width: '100%', padding: '11px 20px', fontSize: 13 }}
-          onClick={() => alert('Clerk auth will be wired in the next build session.')}
-        >
-          Continue with Email →
-        </button>
-
-        <p className="page-centered__note">
-          Don't have an account?{' '}
-          <Link to="/subscribe">Subscribe to Concourse</Link> to get started.
-        </p>
-      </div>
+      <SignIn
+        routing="path"
+        path="/login"
+        afterSignInUrl="/"
+        appearance={{
+          variables: {
+            colorPrimary: '#B08A4A',
+            colorBackground: '#111318',
+            colorInputBackground: '#0a0b0d',
+            colorText: '#e8e6e0',
+            colorInputText: '#e8e6e0',
+            colorTextSecondary: '#6b6a65',
+            borderRadius: '4px',
+          },
+          elements: {
+            card: {
+              background: '#111318',
+              border: '0.5px solid #1e2028',
+              boxShadow: 'none',
+            },
+            headerTitle: { color: '#e8e6e0' },
+            headerSubtitle: { color: '#6b6a65' },
+            formButtonPrimary: {
+              background: '#B08A4A',
+              color: '#0a0b0d',
+              fontSize: '12px',
+            },
+            footerActionLink: { color: '#B08A4A' },
+          },
+        }}
+      />
     </div>
   );
 }

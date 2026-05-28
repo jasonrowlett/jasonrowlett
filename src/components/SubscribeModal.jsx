@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 
+const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly';
+const ANNUAL_URL  = import.meta.env.VITE_STRIPE_ANNUAL_URL  || '#stripe-annual';
+
 export default function SubscribeModal({ onClose }) {
   useEffect(() => {
     const handleKey = (e) => {
@@ -48,9 +51,11 @@ export default function SubscribeModal({ onClose }) {
               <div className="plan-card__feature">All intelligence dossiers</div>
               <div className="plan-card__feature">Macro exposure detail</div>
             </div>
-            <div className="plan-card__price">$19<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span></div>
+            <div className="plan-card__price">
+              $19<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span>
+            </div>
             <div className="plan-card__price-note">or $190/yr — save 2 months</div>
-            <a href="#stripe-monthly" className="plan-card__cta plan-card__cta--primary">
+            <a href={MONTHLY_URL} className="plan-card__cta plan-card__cta--primary" target="_blank" rel="noopener noreferrer">
               Subscribe Monthly →
             </a>
           </div>
@@ -58,7 +63,9 @@ export default function SubscribeModal({ onClose }) {
 
         <div className="subscribe-modal__annual">
           <span>Annual plan available —</span>
-          <a href="#stripe-annual">Subscribe Annually at $190/yr →</a>
+          <a href={ANNUAL_URL} target="_blank" rel="noopener noreferrer">
+            Subscribe Annually at $190/yr →
+          </a>
         </div>
       </div>
     </div>

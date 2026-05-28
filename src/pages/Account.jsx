@@ -1,38 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { UserProfile } from '@clerk/clerk-react';
 
-// Clerk <UserProfile /> and Stripe Customer Portal link wired in next build session
 export default function Account() {
   return (
-    <div className="page-centered">
-      <div className="page-centered__card">
-        <div className="page-centered__eyebrow">Foretoken Concourse</div>
-        <h1 className="page-centered__title">Your Account</h1>
-        <p className="page-centered__sub">
-          Manage your subscription, billing, and profile settings.
-        </p>
+    <div className="section">
+      <div className="container">
+        <div className="section-header">
+          <div className="section-header__label">Account</div>
+          <h1 className="section-header__title">Your Concourse Account</h1>
+        </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <button
-            className="btn-primary"
-            style={{ width: '100%', padding: '11px 20px', fontSize: 13 }}
-            onClick={() => alert('Clerk user profile will be wired in the next build session.')}
-          >
-            Manage Profile →
-          </button>
+        <div style={{ marginBottom: 28 }}>
           <a
-            href="#stripe-portal"
-            className="plan-full-card__cta plan-full-card__cta--outline"
-            style={{ padding: '11px 20px', fontSize: 13, textAlign: 'center', borderRadius: 2 }}
+            href={import.meta.env.VITE_STRIPE_PORTAL_URL || '#stripe-portal'}
+            className="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Manage Billing (Stripe Portal) →
           </a>
         </div>
 
-        <p className="page-centered__note">
-          To cancel or update your subscription, use the Stripe customer portal above.
-          Questions? <a href="mailto:jason@foretoken.co">jason@foretoken.co</a>
-        </p>
+        <UserProfile
+          appearance={{
+            variables: {
+              colorPrimary: '#B08A4A',
+              colorBackground: '#111318',
+              colorInputBackground: '#0a0b0d',
+              colorText: '#e8e6e0',
+              colorInputText: '#e8e6e0',
+              colorTextSecondary: '#6b6a65',
+              borderRadius: '4px',
+            },
+            elements: {
+              card: {
+                background: '#111318',
+                border: '0.5px solid #1e2028',
+                boxShadow: 'none',
+              },
+            },
+          }}
+        />
       </div>
     </div>
   );
