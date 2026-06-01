@@ -2,8 +2,6 @@ import React from 'react';
 import { UserProfile, useUser } from '@clerk/clerk-react';
 import { Link } from 'react-router-dom';
 
-const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly';
-
 export default function Account() {
   const { user } = useUser();
   const isPremium = user?.publicMetadata?.isPremium === true;
@@ -27,19 +25,9 @@ export default function Account() {
               Manage Billing (Stripe Portal) →
             </a>
           ) : (
-            <>
-              <a
-                href={MONTHLY_URL}
-                className="btn-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Upgrade to Premium — $19/mo →
-              </a>
-              <Link to="/subscribe" style={{ fontSize: 13, color: 'var(--text-muted)' }}>
-                View plans
-              </Link>
-            </>
+            <Link to="/subscribe" className="btn-primary">
+              Upgrade to Premium →
+            </Link>
           )}
         </div>
 
