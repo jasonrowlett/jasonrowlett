@@ -18,7 +18,7 @@ function getOutlookSymbol(outlook) {
   }
 }
 
-export default function SectorModal({ sector, onClose, onSubscribe }) {
+export default function SectorModal({ sector, isPremium, onClose, onSubscribe }) {
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') onClose();
@@ -53,12 +53,21 @@ export default function SectorModal({ sector, onClose, onSubscribe }) {
 
         <p className="sector-modal__rationale">{sector.rationale}</p>
 
-        <div className="sector-modal__paywall">
-          <p>Full sector analysis, protocol breakdowns, and historical ratings are available to Concourse subscribers.</p>
-          <button className="btn-primary" onClick={onSubscribe}>
-            Subscribe for Full Access →
-          </button>
-        </div>
+        {isPremium ? (
+          <div className="sector-modal__analysis">
+            {sector.analysis
+              ? <p>{sector.analysis}</p>
+              : <p style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>Full analysis for this sector is being prepared. Check back soon.</p>
+            }
+          </div>
+        ) : (
+          <div className="sector-modal__paywall">
+            <p>Full sector analysis, protocol breakdowns, and historical ratings are available to Concourse subscribers.</p>
+            <button className="btn-primary" onClick={onSubscribe}>
+              Subscribe for Full Access →
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
