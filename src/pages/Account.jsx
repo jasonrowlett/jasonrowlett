@@ -38,6 +38,8 @@ export default function Account() {
                 border: '0.5px solid #1e2028',
                 boxShadow: 'none',
               },
+              avatarImageActionsUpload: { color: '#B08A4A' },
+              fileDropAreaIconBox: { color: '#B08A4A' },
             },
           }}
         />
