@@ -17,7 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Concourse />} />
           <Route path="/subscribe" element={<Subscribe />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login/*" element={<Login />} />
           <Route path="/account" element={<Account />} />
           <Route path="/dossiers/:slug" element={<Concourse />} />
         </Routes>
