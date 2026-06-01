@@ -1,5 +1,8 @@
 import React from 'react';
 
+const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly';
+const ANNUAL_URL  = import.meta.env.VITE_STRIPE_ANNUAL_URL  || '#stripe-annual';
+
 const FREE_FEATURES = [
   'Foretoken newsletter and dispatches',
   'Selected public articles and previews',
@@ -68,14 +71,14 @@ export default function Subscribe() {
               ))}
             </div>
             <a
-              href="#stripe-monthly"
+              href={MONTHLY_URL} target="_blank" rel="noopener noreferrer"
               className="plan-full-card__cta plan-full-card__cta--primary"
               style={{ marginBottom: 10 }}
             >
               Subscribe Monthly — $19/mo →
             </a>
             <a
-              href="#stripe-annual"
+              href={ANNUAL_URL} target="_blank" rel="noopener noreferrer"
               className="plan-full-card__cta plan-full-card__cta--outline"
               style={{ marginTop: 8 }}
             >
