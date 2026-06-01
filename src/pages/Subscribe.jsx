@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly';
 const ANNUAL_URL  = import.meta.env.VITE_STRIPE_ANNUAL_URL  || '#stripe-annual';
@@ -48,9 +49,9 @@ export default function Subscribe() {
                 </div>
               ))}
             </div>
-            <a href="#" className="plan-full-card__cta plan-full-card__cta--outline">
+            <Link to="/login" className="plan-full-card__cta plan-full-card__cta--outline">
               Continue Free →
-            </a>
+            </Link>
           </div>
 
           {/* Premium tier */}
@@ -71,16 +72,20 @@ export default function Subscribe() {
               ))}
             </div>
             <a
-              href={MONTHLY_URL} target="_blank" rel="noopener noreferrer"
+              href={MONTHLY_URL}
               className="plan-full-card__cta plan-full-card__cta--primary"
               style={{ marginBottom: 10 }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Subscribe Monthly — $19/mo →
             </a>
             <a
-              href={ANNUAL_URL} target="_blank" rel="noopener noreferrer"
+              href={ANNUAL_URL}
               className="plan-full-card__cta plan-full-card__cta--outline"
               style={{ marginTop: 8 }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Subscribe Annually — $190/yr →
             </a>
