@@ -1,7 +1,13 @@
 import React from 'react';
-import { UserProfile } from '@clerk/clerk-react';
+import { UserProfile, useUser } from '@clerk/clerk-react';
+import { Link } from 'react-router-dom';
+
+const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly';
 
 export default function Account() {
+  const { user } = useUser();
+  const isPremium = user?.publicMetadata?.isPremium === true;
+
   return (
     <div className="section">
       <div className="container">
@@ -10,15 +16,31 @@ export default function Account() {
           <h1 className="section-header__title">Your Concourse Account</h1>
         </div>
 
-        <div style={{ marginBottom: 28 }}>
-          <a
-            href={import.meta.env.VITE_STRIPE_PORTAL_URL || '#stripe-portal'}
-            className="btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Manage Billing (Stripe Portal) →
-          </a>
+        <div style={{ marginBottom: 28, display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+          {isPremium ? (
+            <a
+              href={import.meta.env.VITE_STRIPE_PORTAL_URL || '#stripe-portal'}
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Manage Billing (Stripe Portal) →
+            </a>
+          ) : (
+            <>
+              <a
+                href={MONTHLY_URL}
+                className="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Upgrade to Premium — $19/mo →
+              </a>
+              <Link to="/subscribe" style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+                View plans
+              </Link>
+            </>
+          )}
         </div>
 
         <UserProfile
