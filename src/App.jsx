@@ -7,6 +7,11 @@ import Concourse from './pages/Concourse';
 import Subscribe from './pages/Subscribe';
 import Login from './pages/Login';
 import Account from './pages/Account';
+import Methodology from './pages/Methodology';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 export default function App() {
   return (
@@ -20,6 +25,11 @@ export default function App() {
           <Route path="/login/*" element={<Login />} />
           <Route path="/account" element={<Account />} />
           <Route path="/dossiers/:slug" element={<Concourse />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </main>
       <Footer />
