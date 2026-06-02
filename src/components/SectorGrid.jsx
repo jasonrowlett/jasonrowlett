@@ -20,7 +20,7 @@ function getOutlookSymbol(outlook) {
   }
 }
 
-export default function SectorGrid({ onSubscribe }) {
+export default function SectorGrid({ isPremium, onSubscribe }) {
   const [activeSector, setActiveSector] = useState(null);
 
   return (
@@ -75,6 +75,7 @@ export default function SectorGrid({ onSubscribe }) {
       {activeSector && (
         <SectorModal
           sector={activeSector}
+          isPremium={isPremium}
           onClose={() => setActiveSector(null)}
           onSubscribe={() => {
             setActiveSector(null);

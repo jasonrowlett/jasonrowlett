@@ -5,19 +5,20 @@ const MONTHLY_URL = import.meta.env.VITE_STRIPE_MONTHLY_URL || '#stripe-monthly'
 const ANNUAL_URL  = import.meta.env.VITE_STRIPE_ANNUAL_URL  || '#stripe-annual';
 
 const FREE_FEATURES = [
-  'Foretoken newsletter and dispatches',
+  'Foretoken newsletter and public dispatches',
   'Selected public articles and previews',
   'Limited sector rating summaries',
-  'Macro banner access',
+  'Macro signal previews',
 ];
 
 const PREMIUM_FEATURES = [
-  'Full sector ratings with analysis',
-  'Protocol-level coverage and ratings',
-  'Complete watchlist (14+ active signals)',
-  'All intelligence dossiers',
-  'Macro exposure detail reports',
-  'Early access to new sector initiations',
+  'Full sector ratings and analysis',
+  'Protocol ratings and scorecards',
+  'Five-pillar risk assessments',
+  'Intelligence dossier archive',
+  'Macro exposure analysis',
+  'Premium newsletter access',
+  'Ongoing ratings updates',
 ];
 
 export default function Subscribe() {
