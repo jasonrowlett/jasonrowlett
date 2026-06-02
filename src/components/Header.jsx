@@ -14,9 +14,9 @@ export default function Header() {
         </Link>
 
         <nav className="site-header__nav" aria-label="Primary navigation">
-          <Link to="/">Ratings</Link>
-          <a href="https://foretoken.beehiiv.com" target="_blank" rel="noopener noreferrer">Intelligence</a>
-          <a href="https://foretoken.xyz/methodology" target="_blank" rel="noopener noreferrer">Methodology</a>
+          <Link to="/" className="site-header__nav-secondary">Ratings</Link>
+          <a href="https://foretoken.beehiiv.com" target="_blank" rel="noopener noreferrer" className="site-header__nav-secondary">Intelligence</a>
+          <a href="https://foretoken.xyz/methodology" target="_blank" rel="noopener noreferrer" className="site-header__nav-secondary">Methodology</a>
           <SignedOut>
             <Link to="/login" style={{ fontSize: 12, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>Sign In</Link>
             <Link to="/subscribe" className="site-header__cta">Subscribe</Link>

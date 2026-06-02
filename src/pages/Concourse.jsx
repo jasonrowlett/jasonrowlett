@@ -20,7 +20,7 @@ export default function Concourse() {
   return (
     <>
       <SectorGrid isPremium={isPremium} onSubscribe={openSubscribe} />
-      <Watchlist onSubscribe={openSubscribe} />
+      <Watchlist isPremium={isPremium} onSubscribe={openSubscribe} />
       <ProtocolSnapshots isPremium={isPremium} onSubscribe={openSubscribe} />
       <LatestDossiers isPremium={isPremium} onSubscribe={openSubscribe} />
       <MacroExposures />

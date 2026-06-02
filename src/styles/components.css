@@ -108,6 +108,24 @@
   }
 }
 
+@media (max-width: 600px) {
+  .subscribe-modal-overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+  .subscribe-modal {
+    padding: 28px 20px;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    border-radius: 4px 4px 0 0;
+    max-width: 100%;
+  }
+  .subscribe-modal__heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
 .plan-card {
   background: #0a0b0d;
   border: 0.5px solid #1e2028;
