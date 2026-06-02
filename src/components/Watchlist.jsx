@@ -8,7 +8,7 @@ const COLUMNS = [
   { key: 'liquidityWatch',label: 'Liquidity Watch', colorClass: 'watchlist-col--blue',  showChange: false },
 ];
 
-export default function Watchlist({ onSubscribe }) {
+export default function Watchlist({ isPremium, onSubscribe }) {
   const { watchlist } = data;
 
   return (
@@ -37,20 +37,22 @@ export default function Watchlist({ onSubscribe }) {
           ))}
         </div>
 
-        <div
-          className="watchlist-locked"
-          onClick={onSubscribe}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => e.key === 'Enter' && onSubscribe()}
-          aria-label="Full watchlist detail available to subscribers"
-        >
-          <div className="watchlist-locked__text">
-            <span className="watchlist-locked__icon">🔒</span>
-            <span>Full watchlist detail available to subscribers →</span>
+        {!isPremium && (
+          <div
+            className="watchlist-locked"
+            onClick={onSubscribe}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && onSubscribe()}
+            aria-label="Subscribe to access full watchlist"
+          >
+            <div className="watchlist-locked__text">
+              <span className="watchlist-locked__icon">🔒</span>
+              <span>Expanded watchlist coverage coming in the next Concourse update.</span>
+            </div>
+            <span className="watchlist-locked__arrow">Subscribe →</span>
           </div>
-          <span className="watchlist-locked__arrow">Subscribe →</span>
-        </div>
+        )}
       </div>
     </section>
   );
