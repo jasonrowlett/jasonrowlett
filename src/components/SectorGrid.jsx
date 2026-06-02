@@ -3,7 +3,7 @@ import data from '../data/concourse.json';
 import SectorModal from './SectorModal';
 
 function getRatingTier(rating) {
-  const base = rating.replace(/[+\-]/g, '');
+  const base = rating.replace(/[+\-−]/g, '');
   if (['AAA', 'AA', 'A'].includes(base)) return 'green';
   if (base === 'BBB') return 'blue';
   if (base === 'BB') return 'amber';
@@ -12,11 +12,14 @@ function getRatingTier(rating) {
 
 function getOutlookSymbol(outlook) {
   switch (outlook) {
-    case 'stable':   return { symbol: '→', color: 'var(--text-muted)' };
-    case 'positive': return { symbol: '↑', color: 'var(--green)' };
-    case 'negative': return { symbol: '↓', color: 'var(--red)' };
-    case 'watch':    return { symbol: '⚑', color: 'var(--amber)' };
-    default:         return { symbol: '→', color: 'var(--text-muted)' };
+    case 'stable':       return { symbol: '→', color: 'var(--text-muted)' };
+    case 'positive':     return { symbol: '↑', color: 'var(--green)' };
+    case 'negative':     return { symbol: '↓', color: 'var(--red)' };
+    case 'watch':        return { symbol: '⚑', color: 'var(--amber)' };
+    case 'constructive': return { symbol: '↑', color: 'var(--green)' };
+    case 'cautious':     return { symbol: '↓', color: 'var(--amber)' };
+    case 'developing':   return { symbol: '⚑', color: 'var(--amber)' };
+    default:             return { symbol: '→', color: 'var(--text-muted)' };
   }
 }
 

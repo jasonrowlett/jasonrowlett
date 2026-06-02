@@ -1,87 +1,364 @@
 {
   "macroBanner": "MACRO SIGNAL — Fed held at 4.25–4.50% in May 2026 · Treasury yields stabilizing · USD weakening vs. EM basket · Tokenized RWA TVL: $68.4B · Shipping indices elevated · Agricultural commodity volatility: HIGH",
-  "lastUpdated": "May 2026",
+  "lastUpdated": "June 2026",
 
   "sectors": [
     {
       "id": "tokenized-treasuries",
       "name": "Tokenized Treasuries",
       "category": "Sovereign / Fixed Income",
-      "rating": "AA",
+      "rating": "AA-",
       "outlook": "stable",
-      "rationale": "Sovereign collateral and rate normalization produce the sector's strongest risk-adjusted profile."
-    },
-    {
-      "id": "trade-finance",
-      "name": "Trade Finance",
-      "category": "Short-Duration Credit",
-      "rating": "A−",
-      "outlook": "stable",
-      "rationale": "Short-duration receivables with institutional origination present manageable credit risk."
+      "rationale": "Sovereign credit quality, institutional wrapper risk.",
+      "analysis": "Near-premium rating on sovereign credit quality, comparatively advanced institutional transparency, and demonstrated institutional adoption. Constrained by off-chain operational dependencies that remain partially opaque, rate-sensitivity of product demand, and absence of sustained stress-testing through a full Federal Reserve easing cycle.",
+      "keySignal": "Rate sensitivity is the primary variable. Sector built on 5%+ yields — demand compresses if the Fed eases materially.",
+      "sectorNote": "Most institutionally mature tokenized RWA sector. Risk resides in the scaffolding, not the underlying sovereign credit. OpenEden holds an S&P AA+f Fund Credit Quality Rating, a level of validation rare across the entire tokenized market. Mountain Protocol has entered wind-down; its documentation standards remain the sector benchmark.",
+      "pillars": {
+        "credit": { "score": 5, "label": "Strong", "note": "Underlying exposure is short-duration U.S. sovereign debt. Credit exposure is effectively sovereign. Risk resides in custodial and legal wrapper integrity, not borrower default." },
+        "transparency": { "score": 4, "label": "Moderate–Strong", "note": "Sector leads all tokenized RWA categories on institutional disclosure. Off-chain operational mechanics remain partially opaque — periodic attestations rather than continuous reserve verification." },
+        "liquidity": { "score": 4, "label": "Moderate–Strong", "note": "Redemption windows T+2–T+3 with minimum thresholds. Circle USDC intermediation illustrates circular dependency underlying 'instant' redemption claims." },
+        "macroExposure": { "score": 2, "label": "Elevated", "note": "All covered protocols emerged from the post-2022 rate normalization cycle. A sustained easing cycle would compress competitive yield advantage across the entire sector simultaneously." },
+        "operational": { "score": 5, "label": "Strong", "note": "BNY Mellon custody, Bermuda regulatory oversight, Chainlink infrastructure. S&P S1+ Fund Volatility Rating at OpenEden. Operational standards materially exceed all other tokenized RWA categories." }
+      },
+      "coveredProtocols": ["Ondo", "OpenEden", "Mountain Protocol"],
+      "lastReviewed": "June 2026"
     },
     {
       "id": "private-credit",
       "name": "Private Credit",
       "category": "Credit / Lending",
-      "rating": "BBB+",
+      "rating": "BBB",
+      "outlook": "stable",
+      "rationale": "Post-2022 rebuild. Transparency gap remains.",
+      "analysis": "Investment grade on demonstrated adoption and post-2022 architectural improvement at leading protocols. Constrained by inconsistent borrower-level disclosure, demonstrated historical loss rates (Goldfinch ~15%), untested macro stress performance at Maple, and persistent opacity at TrueFi.",
+      "keySignal": "Borrower-level disclosure absent across most protocols. In unsecured lending, opacity is the risk — not a feature of the asset class.",
+      "sectorNote": "Genuine institutional maturation underway at Maple Finance. TrueFi transparency deterioration is a sector-level warning: protocol evolution can produce architectural complexity that outpaces investor visibility. Goldfinch provides the most observable credit risk in the peer set, including a documented ~15% historical loss rate. Centrifuge remains investment-grade on infrastructure but its token value accrual mechanism is unresolved.",
+      "pillars": {
+        "credit": { "score": 2, "label": "Not Observable", "note": "Borrower-level disclosure absent or inadequate across most covered protocols. Goldfinch: observable but ~15% historical loss rate. Aggregate sector credit quality cannot be independently assessed." },
+        "transparency": { "score": 3, "label": "Moderate", "note": "Wide internal variance. Real progress from 2022 crisis but borrower-level disclosure falls well short of institutional private credit norms." },
+        "liquidity": { "score": 2, "label": "Constrained", "note": "Maple: sub-5-minute withdrawals under normal conditions — stress durability unproven. Centrifuge: variable, fund-structure-dependent. Sector aggregate below investment grade." },
+        "macroExposure": { "score": 2, "label": "Elevated", "note": "All four covered protocols are exposed to macro conditions that deteriorated materially in 2022 and have not been fully reversed. The test of whether these protocols can maintain integrity through an adverse environment remains open." },
+        "operational": { "score": 3, "label": "Moderate", "note": "Maple: institutional-grade post-2022 rebuild, sector leader. TrueFi: operational architecture diffuse and difficult to map. Genuine improvement from early DeFi but operational maturity remains uneven." }
+      },
+      "coveredProtocols": ["Maple Finance", "TrueFi", "Centrifuge", "Goldfinch"],
+      "lastReviewed": "June 2026"
+    },
+    {
+      "id": "trade-finance",
+      "name": "Trade Finance",
+      "category": "Short-Duration Credit",
+      "rating": "BB+",
       "outlook": "negative",
-      "rationale": "Rapid on-chain expansion has outpaced underwriting transparency across key protocols."
+      "rationale": "Addresses real capital gap. Smart contract architecture unfit for geopolitical stress.",
+      "analysis": "Below investment grade on borrower opacity, maturity logic vulnerability to geopolitical disruption, FX mismatch risk in SME borrower base, and absence of comprehensive default disclosure. Long-term structural potential remains significant if architecture is reformed.",
+      "keySignal": "Strait of Hormuz: $5.16B in tokenized credit on maturity timelines built for a functioning logistics network. Fewer than 60 transits across three weeks.",
+      "sectorNote": "Largest structural opportunity in tokenized RWA — $2.5T annual financing gap per ADB. Most exposed to physical-world dependencies smart contracts cannot accommodate. The Hormuz crisis has provided the category's first real geopolitical stress test and the sector failed it structurally: deterministic maturity logic cannot distinguish commercial default from physical impossibility.",
+      "pillars": {
+        "credit": { "score": 2, "label": "Opaque", "note": "Borrower-level financials, default history, and recovery processes not disclosed. AIG insurance coverage scope and triggers not fully disclosed. Legal enforceability across multiple SME borrower jurisdictions not independently verified." },
+        "transparency": { "score": 2, "label": "Weak", "note": "Platform mechanics visible; asset-level opacity persists. Trade finance has the weakest sector-level transparency of all covered categories. Blockchain improves how capital moves; it does not automatically improve how risk is assessed." },
+        "liquidity": { "score": 3, "label": "Moderate", "note": "Short-duration self-liquidating structure provides natural liquidity rhythm under normal conditions. Hormuz crisis reveals critical vulnerability: smart contract maturity windows cannot accommodate physical impossibility." },
+        "macroExposure": { "score": 1, "label": "Critical", "note": "Strait of Hormuz crisis April–May 2026: fewer than 60 vessel transits across nearly three weeks (vs. 120–140 daily). $5.16B in distributed tokenized credit on deterministic timelines during logistics paralysis. This is an active, ongoing, sector-specific stress event." },
+        "operational": { "score": 3, "label": "Moderate", "note": "Polytrade: Mastercard, Chainlink, AIG partnerships. Critical structural gap: smart contract architecture has not been updated to accommodate force majeure, physical disruption, or grace-period provisions." }
+      },
+      "coveredProtocols": ["Polytrade", "Centrifuge (trade pools)"],
+      "lastReviewed": "June 2026"
     },
     {
       "id": "real-estate",
       "name": "Real Estate",
       "category": "Real Assets",
-      "rating": "BBB−",
+      "rating": "BB-",
       "outlook": "negative",
-      "rationale": "Elevated rates and PMM-dependent liquidity models create structural fragility."
+      "rationale": "Tokenization cannot liquefy concrete.",
+      "analysis": "Below investment grade on illiquid underlying assets regardless of tokenization layer, absent secondary market infrastructure, legal enforceability gaps untested through adversarial litigation, adverse mortgage rate environment, and incomplete audit posture at Lofty.",
+      "keySignal": "Blocksquare Oceanpoint TVL: $0. Lofty PMM audit incomplete. Secondary market infrastructure absent across the sector.",
+      "sectorNote": "Genuine innovation in liquidity architecture (Lofty PMM) and operational execution (Propy title acquisitions). Legal enforceability gaps remain structurally unresolved — county registrars and courts remain the terminal arbiters of ownership disputes, regardless of blockchain records. The adverse rate environment directly reduces transaction throughput for all three covered protocols simultaneously.",
+      "pillars": {
+        "credit": { "score": 3, "label": "Moderate", "note": "Physical properties carry inherent land value floor and mandatory insurance. Per-property performance data absent across all three protocols. County registrars and courts remain terminal arbiters." },
+        "transparency": { "score": 3, "label": "Moderate", "note": "Lofty: strong protocol-mechanics transparency, weak on underlying collateral. Blocksquare: on-chain registry genuine differentiator; historical audit links inaccessible (404 errors). Protocol mechanics increasingly documented, underlying asset financial performance is not." },
+        "liquidity": { "score": 2, "label": "Constrained", "note": "Residential and commercial property is structurally illiquid regardless of tokenization layer. Blocksquare Oceanpoint: $0 TVL — liquidity layer non-functional. Below investment grade." },
+        "macroExposure": { "score": 2, "label": "Elevated", "note": "Elevated mortgage rates since 2022 have materially reduced housing transaction velocity across all three protocols simultaneously. PMM yield compression and pool thinning arrive simultaneously in adverse macro environments." },
+        "operational": { "score": 3, "label": "Moderate", "note": "Propy: most mature operational settlement stack in tokenized residential RE. Lofty: YC-backed, bespoke PMM. Blocksquare: governance stalled May 2024. Genuine innovation present, operational maturity gaps exist." }
+      },
+      "coveredProtocols": ["Lofty", "Propy", "Blocksquare"],
+      "lastReviewed": "June 2026"
     },
     {
       "id": "tokenized-equities",
       "name": "Tokenized Equities",
       "category": "Equity / SPV",
-      "rating": "BBB",
+      "rating": "BBB-",
       "outlook": "stable",
-      "rationale": "Offshore SPV architecture introduces enforceability risk not present in direct equity holdings."
+      "rationale": "Fully collateralized. Bifurcated liquidity. Geopolitical exposure.",
+      "analysis": "Provisional investment grade on fully collateralized SPV structure and Chainlink PoR transparency. Constrained by bifurcated liquidity architecture, direct full equity-market volatility exposure, geopolitical sensitivity affecting cross-border capital flows, and U.S. access restrictions.",
+      "keySignal": "Retail liquidity depends entirely on DEX depth. Institutional redemption requires ~$100K minimum and T+2 to T+5 settlement. Two different products under one token.",
+      "sectorNote": "Backed Finance demonstrates that institutional-grade equity tokenization is achievable — but only through a Jersey SPV, Swiss DLT legislation, SEC-registered custodians, and multiple counterparty relationships. The blockchain settles. The institutional machinery underneath it does everything else. U.S. person restrictions create an unresolved tension between legal enforceability and technical accessibility.",
+      "pillars": {
+        "credit": { "score": 4, "label": "Low–Medium", "note": "Fully collateralized SPV architecture reduces direct default risk. Backed Assets (JE) Limited Jersey SPV with bankruptcy-remoteness design. Credit risk is exposure to legal durability of wrapper: Jersey SPV law, Swiss DLT legislation, custodian segregation." },
+        "transparency": { "score": 4, "label": "High", "note": "Chainlink Proof of Reserve provides on-chain verification of token supply versus underlying collateral. Among the sector's strongest reserve attestation systems." },
+        "liquidity": { "score": 2, "label": "Bifurcated", "note": "Professional investors: direct mint/redeem at ~$100K minimum, T+2–T+5. Retail participants: DEX liquidity only — no direct redemption access. Sector liquidity is below investment grade." },
+        "macroExposure": { "score": 2, "label": "Direct", "note": "Full underlying exposure to equity-market volatility, interest rate shifts, and geopolitical disruptions. U.S. persons formally restricted despite permissionless on-chain trading creates legal/technical asymmetry." },
+        "operational": { "score": 4, "label": "Strong", "note": "Swiss banking, Jersey issuer, U.S. broker-dealers, multiple custodians (Maerki Baumann, Alpaca Securities, InCore Bank). Deliberately distributed institutional architecture." }
+      },
+      "coveredProtocols": ["Backed Finance"],
+      "lastReviewed": "June 2026"
     },
     {
       "id": "precious-metals",
       "name": "Precious Metals",
       "category": "Commodities / Reserve Assets",
-      "rating": "BBB+",
+      "rating": "BBB",
+      "outlook": "positive",
+      "rationale": "Reserve infrastructure thesis. Sovereign accumulation tailwind.",
+      "analysis": "Solid investment grade on reserve-backed collateral architecture substantially reducing borrower-dependent risk, LBMA/Brink's custody credibility, Singapore regulatory positioning, and structural macro alignment with sovereign reserve diversification. Constrained by emergent rather than deep institutional token liquidity.",
+      "keySignal": "BRICS+ central banks hold 6,000+ tonnes of gold — fastest sovereign accumulation since post-Bretton Woods. Matrixdock thesis is directly aligned with this structural trend.",
+      "sectorNote": "More reserve infrastructure thesis than crypto protocol. LBMA-accredited collateral, Brink's custody, and Singapore MAS regulatory positioning provide institutional credibility that most tokenized RWA competitors cannot replicate. Token liquidity remains materially thinner than underlying bullion market depth — the bifurcation is the primary constraint on the rating.",
+      "pillars": {
+        "credit": { "score": 5, "label": "Strong", "note": "Fully allocated LBMA-accredited bullion reserves substantially reduce borrower-dependent risk. XAUm: physically allocated gold in insured custody. Risk resides in custody integrity and redemption mechanics — not counterparty solvency." },
+        "transparency": { "score": 4, "label": "Moderately Strong", "note": "Proof-of-reserve materials, third-party audit documentation, custody disclosures exceed most tokenized asset competitors. Investors remain reliant on periodic attestations." },
+        "liquidity": { "score": 3, "label": "Moderate", "note": "Strong theoretical liquidity from underlying gold and Treasury markets. Token wrapper liquidity materially thinner — XAUm market cap modest versus PAXG and XAUT." },
+        "macroExposure": { "score": 4, "label": "Strong but Cyclical", "note": "BRICS+ sovereign gold accumulation at fastest pace since post-Bretton Woods. Geopolitical fragmentation and elevated Treasury volatility support demand. Cyclically variable: sustained disinflation could temper tailwinds." },
+        "operational": { "score": 4, "label": "Strong", "note": "Singapore positioning, InvestaX (MAS-regulated) partnership, LBMA accreditation, Brink's vaulting across Singapore and Hong Kong. Multi-chain expansion and silver product demonstrate strategic coherence." }
+      },
+      "coveredProtocols": ["Matrixdock"],
+      "lastReviewed": "June 2026"
+    }
+  ],
+
+  "protocols": [
+    {
+      "id": "ondo-finance",
+      "name": "Ondo Finance",
+      "ticker": "ONDO / OUSG",
+      "sector": "tokenized-treasuries",
+      "sectorLabel": "Tokenized Treasuries",
+      "rating": "IG",
+      "ratingLabel": "Investment Grade",
       "outlook": "stable",
-      "rationale": "Reserve-backed collateral provides strong credit floor; custody concentration is the primary risk."
+      "summary": "Tokenized U.S. Treasury exposure through fund structures. One of the most institutionally sophisticated protocols in tokenized finance. Token holders own fund units, not Treasury bills.",
+      "pillars": {
+        "credit": { "label": "Strong", "note": "Short-duration U.S. sovereign exposure. Risk is custodial and legal wrapper integrity, not borrower default." },
+        "transparency": { "label": "Moderate", "note": "Extensive onboarding docs, smart contract addresses, governance structures. Off-chain custodial mechanics partially opaque." },
+        "liquidity": { "label": "Moderate–Strong", "note": "Official redemptions T+2–3 business days, $50K–$100K minimum thresholds. Secondary market transferability is not equivalent to redemption liquidity." },
+        "macroExposure": { "label": "Elevated", "note": "Direct Fed policy dependency. Ondo is effectively exporting Fed policy onto blockchain rails." },
+        "operational": { "label": "Strong", "note": "Formal onboarding, KYC, eligibility controls, audited contracts. Resembles institutional finance translated into programmable infrastructure." }
+      }
     },
     {
-      "id": "infrastructure-debt",
-      "name": "Infrastructure Debt",
-      "category": "Infrastructure / Project Finance",
-      "rating": "BB+",
-      "outlook": "watch",
-      "rationale": "Emerging asset class with limited on-chain track record and high macro sensitivity."
-    },
-    {
-      "id": "trade-receivables",
-      "name": "Trade Receivables",
-      "category": "Receivables / EM Credit",
-      "rating": "BB+",
+      "id": "openeden",
+      "name": "OpenEden",
+      "ticker": "TBILL",
+      "sector": "tokenized-treasuries",
+      "sectorLabel": "Tokenized Treasuries",
+      "rating": "IG+",
+      "ratingLabel": "Investment Grade — Strong",
       "outlook": "stable",
-      "rationale": "SME borrower concentration in emerging markets introduces meaningful default correlation risk."
+      "summary": "98.7% short-duration Treasuries, 40.8-day WAM. S&P 'AA+f' Fund Credit Quality Rating. BNY Mellon custody. Redemption is operator-mediated, not autonomous.",
+      "pillars": {
+        "credit": { "label": "Strong", "note": "Sovereign credit quality confirmed by S&P: ~98.7% Treasury bills maturing within six months. Risk is operational and institutional, not default." },
+        "transparency": { "label": "Moderate–Strong", "note": "Hacken audit reveals privileged admin controls: operators can pause deposits, upgrade contracts, modify fees. Transparency is disclosure-based, not trust-minimized." },
+        "liquidity": { "label": "Moderate–Strong", "note": "Redemption via USDC, supported blockchain rails, or bank wire. Operator-mediated processing — not autonomous on-chain execution." },
+        "macroExposure": { "label": "Moderate", "note": "Tightly linked to Fed rate policy and front-end Treasury yields. Rate compression reduces yield competitiveness but leaves underlying collateral quality intact." },
+        "operational": { "label": "Strong", "note": "BNY Mellon (custodian), Dreyfus (portfolio management), Coinbase Custody (digital assets). S&P 'S1+' Fund Volatility Rating." }
+      }
     },
     {
-      "id": "agriculture",
-      "name": "Agriculture",
-      "category": "Commodities / Real Assets",
-      "rating": "BB−",
-      "outlook": "watch",
-      "rationale": "Commodity volatility, harvest-cycle liquidity mismatches, and thin origination infrastructure constrain the rating."
+      "id": "mountain-protocol",
+      "name": "Mountain Protocol",
+      "ticker": "USDM",
+      "sector": "tokenized-treasuries",
+      "sectorLabel": "Tokenized Treasuries",
+      "rating": "WD",
+      "ratingLabel": "Wind-Down",
+      "outlook": "negative",
+      "summary": "Bermuda-regulated yield-bearing stablecoin backed by short-duration Treasuries. Initiated formal wind-down; Anchorage Digital acquisition in process. Documentation remains the sector transparency benchmark.",
+      "pillars": {
+        "credit": { "label": "Moderate–Low (Wind-Down)", "note": "Primary reserve exposure was short-duration U.S. Treasuries and cash equivalents. Wind-down introduces operational transition risk." },
+        "transparency": { "label": "Strong", "note": "Monthly attestations, reserve mandate disclosures, and proof-of-reserves materially exceeded stablecoin industry norms. The documentation standard set is the sector benchmark." },
+        "liquidity": { "label": "Moderate (Transition Risk)", "note": "Multiple redemption and transfer pathways documented. Liquidity contingent on reserve accessibility through Anchorage transition." },
+        "macroExposure": { "label": "Elevated (Wind-Down)", "note": "Yield-bearing stablecoin demand structurally linked to U.S. rate conditions. A sustained rate-cut cycle would have compressed USDM's competitive yield advantage." },
+        "operational": { "label": "Strong (Historical) / Transition Risk", "note": "Bermuda Monetary Authority oversight and operational continuity documentation reflected mature infrastructure. Operational continuity risk during Anchorage transition period." }
+      }
     },
     {
-      "id": "carbon-environmental",
-      "name": "Carbon & Environmental",
-      "category": "ESG / Registry Assets",
-      "rating": "B+",
-      "outlook": "watch",
-      "rationale": "Registry fragmentation, verification opacity, and political risk make this the sector's highest-uncertainty category."
+      "id": "maple-finance",
+      "name": "Maple Finance",
+      "ticker": "SYRUP / MPL",
+      "sector": "private-credit",
+      "sectorLabel": "Private Credit",
+      "rating": "IG",
+      "ratingLabel": "Investment Grade — Moderate",
+      "outlook": "stable",
+      "summary": "Rebuilt around overcollateralized institutional lending post-2022. AUM $516M to $4.59B in 2025. Sub-5-minute withdrawals reported. Stress durability through adverse crypto cycle untested.",
+      "pillars": {
+        "credit": { "label": "Moderate–Strong", "note": "Post-2022 rebuild around overcollateralized institutional lending. Rapid AUM expansion during favorable conditions is itself a latent risk factor." },
+        "transparency": { "label": "Strong", "note": "Live loan visibility on-chain and pool documentation exceeds most DeFi credit peers. Internal underwriting assumptions not independently verifiable." },
+        "liquidity": { "label": "Moderate", "note": "Sub-5-minute average withdrawal times under normal conditions. Durability during collateral drawdowns or broad crypto deleveraging remains the unresolved question." },
+        "macroExposure": { "label": "Elevated", "note": "Growth correlated with rising BTC ETF inflows and recovering crypto asset prices. Contraction in crypto liquidity cycles would materially stress active loan portfolios." },
+        "operational": { "label": "Strong", "note": "Multi-chain across Ethereum, Solana, Arbitrum, and Base. Chainlink-powered infrastructure. Governance and audit maturity above early-iteration lending protocols." }
+      }
+    },
+    {
+      "id": "truefi",
+      "name": "TrueFi / Brila",
+      "ticker": "TRU",
+      "sector": "private-credit",
+      "sectorLabel": "Private Credit",
+      "rating": "UR",
+      "ratingLabel": "Under Review — Transparency Impaired",
+      "outlook": "negative",
+      "summary": "Pioneer of unsecured on-chain institutional lending. Legacy architecture now obscures current operational status. Dashboards load; data does not populate. The central risk is not confirmed default — it is the impossibility of ruling it out.",
+      "pillars": {
+        "credit": { "label": "Elevated / Unverifiable", "note": "Active borrower exposure cannot be independently confirmed from public-facing infrastructure. Unsecured lending makes transparency a direct substitute for collateral." },
+        "transparency": { "label": "Weak", "note": "Legacy DAO pool interfaces failed to populate data during Foretoken review. Brila documentation coexists with older systems without clear integration logic." },
+        "liquidity": { "label": "Unclear", "note": "Multiple legacy vault categories and portfolio frameworks complicate redemption pathway analysis. Token liquidity does not reflect underlying credit liquidity." },
+        "macroExposure": { "label": "Moderate–Elevated", "note": "Real-world credit and treasury vault exposure creates sensitivity to rate cycles, refinancing conditions, and private credit market deterioration." },
+        "operational": { "label": "Deteriorating", "note": "Coexistence of legacy TrueFi systems, Brila documentation, and multiple portfolio frameworks suggests architectural diffusion rather than cohesion." }
+      }
+    },
+    {
+      "id": "centrifuge",
+      "name": "Centrifuge",
+      "ticker": "CFG",
+      "sector": "private-credit",
+      "sectorLabel": "Private Credit",
+      "rating": "IG",
+      "ratingLabel": "Investment Grade Preliminary — Under Review",
+      "outlook": "stable",
+      "summary": "One of the most established RWA infrastructure protocols. $476.2M in active pools across private credit, trade finance, CLO exposure, and structured products. Token value accrual mechanism remains economically ambiguous.",
+      "pillars": {
+        "credit": { "label": "Not Directly Observable", "note": "No standardized, publicly accessible borrower-level performance data identified across pools. Protocol-level architecture used as proxy — an inferior substitute for direct credit assessment." },
+        "transparency": { "label": "Moderate", "note": "CentrifugeScan provides detailed visibility into tokenized asset flows and fund structures. These interfaces reflect asset representation, not underlying credit performance." },
+        "liquidity": { "label": "Variable", "note": "Dependent on underlying fund structures and tokenized vehicle design, which vary by issuer. Standardized redemption mechanics not identified across pools." },
+        "macroExposure": { "label": "Rate-Sensitive", "note": "Available market data suggests meaningful concentration in treasury-oriented products. Rate compression could accelerate capital migration." },
+        "operational": { "label": "Strong", "note": "Integration with established asset managers, cross-chain settlement, CLO and equity-linked wrapper capability. Early-mover advantage in institutional RWA infrastructure." }
+      }
+    },
+    {
+      "id": "goldfinch",
+      "name": "Goldfinch",
+      "ticker": "GFI",
+      "sector": "private-credit",
+      "sectorLabel": "Private Credit",
+      "rating": "MOD",
+      "ratingLabel": "Moderate — Observable Credit Risk",
+      "outlook": "negative",
+      "summary": "Borrower-driven lending with highest observable transparency in peer set. Deal-level disclosure of repayments, restructurings, and defaults. Active loans ~$51M. Reported historical loss rate ~15%.",
+      "pillars": {
+        "credit": { "label": "Observable / Moderate Risk", "note": "~15% reported historical loss rate. Documented defaults including ~$10M impairment. Observable credit risk is analytically preferable to hidden exposure." },
+        "transparency": { "label": "High", "note": "Borrower-level outcomes and aggregate performance metrics publicly accessible. 'Observable credit risk' versus Centrifuge's 'abstracted credit exposure' — a meaningful analytical distinction." },
+        "liquidity": { "label": "Constrained", "note": "Defined withdrawal windows (e.g. two-week periods) and open-ended pool structures. Constrained but structured." },
+        "macroExposure": { "label": "High", "note": "SME credit in emerging markets. Acute sensitivity to EM macro stress, FX depreciation, and supply chain disruption in borrower geographies." },
+        "operational": { "label": "Strong", "note": "Delegated underwriting framework. Human credit judgment is both the protocol's key strength and a key dependency." }
+      }
+    },
+    {
+      "id": "polytrade",
+      "name": "Polytrade",
+      "ticker": "TRADE",
+      "sector": "trade-finance",
+      "sectorLabel": "Trade Finance",
+      "rating": "BB",
+      "ratingLabel": "Preliminary Moderate — Residual Opacity",
+      "outlook": "negative",
+      "summary": "Pooled trade finance liquidity for SME invoice financing. Mastercard, Chainlink, AIG partnerships. Process transparency strong. Borrower-level credit opacity persists. Hormuz disruption creates direct portfolio stress.",
+      "pillars": {
+        "credit": { "label": "Structurally Sound / Opaque", "note": "Framework is sound: pooled exposure, hybrid algorithmic + human underwriting, institutional partnerships. No borrower financials, default history, or recovery data disclosed." },
+        "transparency": { "label": "Process Strong / Asset Weak", "note": "Platform mechanics, validator structure, and liquidity design are documented. Borrower-level financials, default history, and recovery processes are not disclosed." },
+        "liquidity": { "label": "Flexible", "note": "Pooled structure provides more flexibility than P2P invoice models. Short-duration self-liquidating instruments provide natural liquidity rhythm under normal conditions." },
+        "macroExposure": { "label": "High", "note": "Trade flow sensitivity to Hormuz disruption. FX mismatch: INR -2.21% vs USD through April 2026. Smart contract maturity windows cannot accommodate physical impossibility." },
+        "operational": { "label": "Moderate", "note": "Mastercard, Chainlink, AIG partnerships signal infrastructure maturity. AIG insurance coverage scope, triggers, and enforceability not fully disclosed." }
+      }
+    },
+    {
+      "id": "matrixdock",
+      "name": "Matrixdock",
+      "ticker": "XAUm / STBT / XAGm",
+      "sector": "precious-metals",
+      "sectorLabel": "Precious Metals",
+      "rating": "BBB",
+      "ratingLabel": "Moderate–Strong",
+      "outlook": "positive",
+      "summary": "LBMA-accredited gold (XAUm), tokenized Treasuries (STBT), silver (XAGm). Brink's custody. Backed by Matrixport. BRICS sovereign gold accumulation is the primary macro tailwind. Token liquidity remains emergent.",
+      "pillars": {
+        "credit": { "label": "Strong", "note": "Reserve-backed collateral architecture substantially reduces borrower-dependent risk. XAUm collateral is LBMA-accredited bullion held in insured custody." },
+        "transparency": { "label": "Moderately Strong", "note": "Proof-of-reserve materials, third-party audit documentation, custody disclosures exceed most tokenized asset issuers. Periodic attestations not fully continuous." },
+        "liquidity": { "label": "Moderate", "note": "Strong theoretical liquidity from underlying gold and Treasury markets. Token wrapper liquidity is materially thinner than underlying asset liquidity." },
+        "macroExposure": { "label": "Strong but Cyclical", "note": "BRICS+ sovereign gold accumulation at fastest pace since post-Bretton Woods. Demand tied to geopolitical reserve diversification trends — cyclically variable." },
+        "operational": { "label": "Strong", "note": "Singapore positioning, InvestaX (MAS-regulated) partnership, LBMA accreditation, Brink's vaulting across Singapore and Hong Kong." }
+      }
+    },
+    {
+      "id": "propy",
+      "name": "Propy",
+      "ticker": "PRO",
+      "sector": "real-estate",
+      "sectorLabel": "Real Estate",
+      "rating": "BB+",
+      "ratingLabel": "Moderate — Operational Leader",
+      "outlook": "stable",
+      "summary": "Title firm acquisition strategy backed by $100M hybrid credit/DeFi facility. Delta South Title (Alabama) and Boss Law (Florida) acquired. Agent Avery AI: 96x file-opening improvement. Legal enforceability of on-chain records remains jurisdictionally unresolved.",
+      "pillars": {
+        "credit": { "label": "Moderate", "note": "LLC/NFT ownership structure provides degree of bankruptcy remoteness. Legal enforceability resides with county registrars and state courts, not smart contracts." },
+        "transparency": { "label": "Moderate", "note": "On-chain records improve auditability over conventional transactions. Blockchain records depend on off-chain data integrity — the oracle problem of real estate tokenization." },
+        "liquidity": { "label": "Moderate–Low", "note": "Blockchain compresses settlement timelines but does not change the structural illiquidity of residential property. Secondary market depth for deed-linked NFTs remains negligible." },
+        "macroExposure": { "label": "High", "note": "Directly sensitive to mortgage rate cycles and housing transaction velocity — both materially deteriorated since 2022. GENIUS Act and FHFA signals provide improving regulatory backdrop." },
+        "operational": { "label": "Strong", "note": "Most mature operational settlement stack in tokenized residential real estate. Delta South: 96-fold file-opening improvement. $100M hybrid facility (Metropolitan Partners Group + Morpho)." }
+      }
+    },
+    {
+      "id": "lofty",
+      "name": "Lofty",
+      "ticker": "N/A (Algorand-native)",
+      "sector": "real-estate",
+      "sectorLabel": "Real Estate",
+      "rating": "BB+",
+      "ratingLabel": "Moderate — Strongest Fractional Infrastructure",
+      "outlook": "stable",
+      "summary": "Proactive Market Maker enables market-order exits against USDC staking pools. $100M deployed, 40,000 investors. PMM yield is volume-dependent and procyclical. PMM contracts postdate incomplete 2022 CertiK engagement.",
+      "pillars": {
+        "credit": { "label": "Moderate–Low", "note": "Physical residential properties carry inherent land value floor and mandatory insurance. Per-property performance data not publicly disclosed — credit quality cannot be independently assessed at the asset level." },
+        "transparency": { "label": "Strong", "note": "PMM mechanics, fee schedules, tax reporting, and legal terms comprehensively documented and exceed sector norms." },
+        "liquidity": { "label": "Moderate", "note": "PMM enables market-order exits without requiring a matching buyer — the most functional secondary market in U.S. fractional residential real estate. Pool depth is property-specific and procyclical." },
+        "macroExposure": { "label": "Elevated", "note": "U.S. residential real estate is highly sensitive to interest rate cycles. PMM staking yield compresses simultaneously with property valuations in adverse rate environments." },
+        "operational": { "label": "Strong", "note": "Y Combinator-backed. Institutional investors: NVIDIA, Rebel Fund, Launch, Hustle Fund. Bespoke PMM designed from first principles for real-world assets." }
+      }
+    },
+    {
+      "id": "blocksquare",
+      "name": "Blocksquare",
+      "ticker": "BST",
+      "sector": "real-estate",
+      "sectorLabel": "Real Estate",
+      "rating": "BB-",
+      "ratingLabel": "Moderate — Liquidity Layer Critical",
+      "outlook": "negative",
+      "summary": "B2B tokenization infrastructure. $200M+ in 29 countries, 66 properties. Revenue Distribution Contract: Hacken 10/10 (Jan 2024). Oceanpoint: $0 TVL. BST: ~$0.015 (~98% from ATH). POINT token fix undeployed.",
+      "pillars": {
+        "credit": { "label": "High Risk", "note": "Revenue rights model is structurally sound — token holders hold a contractual right to defined property revenue. Underwriting is entirely partner-dependent with no publicly disclosed output." },
+        "transparency": { "label": "Moderate", "note": "On-chain property registry and IPFS-stored corporate resolutions are genuine differentiators. Three historical audit PDFs inaccessible at original URLs (404 errors)." },
+        "liquidity": { "label": "Critical", "note": "Oceanpoint TVL reported $0 (DefiLlama). BST at ~$0.015 (~$1M market cap), ~98% below ATH. POINT whitepaper published April 2025; not yet in full production." },
+        "macroExposure": { "label": "Elevated", "note": "European commercial real estate absorbed significant ECB rate pressure through 2022–2024. 29-country footprint adds jurisdictional macro complexity." },
+        "operational": { "label": "Moderate", "note": "Seven years of continuous development since 2018. Clean January 2024 Hacken audit. Governance board stalled since May 2024. BST team vesting completed February 2024." }
+      }
+    },
+    {
+      "id": "backed-finance",
+      "name": "Backed Finance",
+      "ticker": "xStocks",
+      "sector": "tokenized-equities",
+      "sectorLabel": "Tokenized Equities",
+      "rating": "BBB-",
+      "ratingLabel": "Moderate — Bifurcated Structure",
+      "outlook": "stable",
+      "summary": "Tokenized public equities (Apple, Nvidia, S&P 500) via Jersey SPV. Chainlink Proof of Reserve. Institutional redemption at ~$100K minimum, T+2–T+5. Retail depends on DEX liquidity. U.S. persons restricted.",
+      "pillars": {
+        "credit": { "label": "Low–Medium", "note": "Fully collateralized SPV architecture reduces direct default risk. Backed Assets (JE) Limited: bankruptcy-remoteness design ringfences collateral from parent liabilities." },
+        "transparency": { "label": "High", "note": "Chainlink Proof of Reserve provides on-chain verification that token supply corresponds to underlying collateral balances. Among the sector's strongest reserve attestation systems." },
+        "liquidity": { "label": "Bifurcated", "note": "Institutional: direct mint/redeem at ~$100K minimum, T+2–T+5. Retail: DEX liquidity only — no direct redemption access. Bifurcation becomes acute during macro stress." },
+        "macroExposure": { "label": "Direct", "note": "Full underlying exposure to equity-market volatility, interest rate shifts, and geopolitical disruptions. U.S. persons formally restricted despite permissionless on-chain trading." },
+        "operational": { "label": "Strong", "note": "Custodians: Maerki Baumann, Alpaca Securities, InCore Bank, Alpaca Crypto. Swiss banking infrastructure, Jersey issuer entities, U.S. broker-dealers." }
+      }
     }
   ],
 
@@ -89,35 +366,35 @@
     "downgrades": [
       {
         "name": "Real Estate Sector",
-        "change": "BBB → BBB−",
+        "change": "BBB → BB-",
         "note": "PMM liquidity stress and rate persistence"
       },
       {
-        "name": "Private Credit",
-        "change": "BBB+ → BBB+ (Neg outlook)",
-        "note": "Underwriting opacity flagged"
+        "name": "Trade Finance Sector",
+        "change": "A- → BB+",
+        "note": "Hormuz crisis structural failure"
       }
     ],
     "upgrades": [
       {
         "name": "Tokenized Treasuries",
-        "change": "AA− → AA",
+        "change": "AA- (Stable)",
         "note": "Fed pause reduces duration risk"
       },
       {
         "name": "Maple Finance",
-        "change": "BB+ → BBB−",
+        "change": "BB+ → IG",
         "note": "Overcollateralization discipline confirmed"
       }
     ],
     "underReview": [
       {
-        "name": "Carbon & Environmental Sector",
-        "note": "Registry standards review in progress"
+        "name": "TrueFi / Brila",
+        "note": "Transparency impairment; operational status unverifiable"
       },
       {
-        "name": "Blocksquare Protocol",
-        "note": "Liquidity layer assessment ongoing"
+        "name": "Blocksquare Oceanpoint",
+        "note": "Liquidity layer at $0 TVL"
       }
     ],
     "liquidityWatch": [
@@ -132,42 +409,76 @@
     ]
   },
 
-  "dossiers": [
+  "intelligenceReports": [
     {
-      "id": "agriculture-initiation",
-      "title": "Tokenized Agriculture: Sector Initiation",
-      "sector": "Agriculture",
-      "date": "May 2026",
-      "lede": "Foretoken initiates coverage of tokenized agricultural assets with a BB− rating under elevated macro uncertainty.",
-      "isFree": true,
-      "href": "/dossiers/agriculture"
+      "id": "report-redemption-illusion",
+      "title": "The Redemption Illusion",
+      "badge": "ANALYSIS",
+      "date": "May 22, 2026",
+      "sector": "Multi-Sector",
+      "lede": "Blockchain improves transfer speed. It does not transform the underlying liquidity profile of the asset itself. Five documented cases where the narrative breaks.",
+      "foretokenLine": "The asset is still what it is. The token only says so faster.",
+      "isFree": false
     },
     {
-      "id": "private-credit-stress-test",
-      "title": "Private Credit Stress Test: Q2 2026",
-      "sector": "Private Credit",
-      "date": "May 2026",
-      "lede": "Underwriting opacity and TVL contraction signal deteriorating sector fundamentals.",
-      "isFree": false,
-      "href": "#"
-    },
-    {
-      "id": "trade-finance-institutional",
-      "title": "Trade Finance: Institutional Origination Analysis",
+      "id": "report-hormuz-limits",
+      "title": "The Strait of Hormuz and the Limits of Tokenized Trade Finance",
+      "badge": "ALERT",
+      "date": "May 21, 2026",
       "sector": "Trade Finance",
-      "date": "April 2026",
-      "lede": "Short-duration receivable protocols maintain structural integrity under current credit conditions.",
-      "isFree": false,
-      "href": "#"
+      "lede": "Smart contracts cannot distinguish between commercial default and physical impossibility. When cargo cannot move, the $5.16B in tokenized credit built on that movement faces structural misalignment.",
+      "foretokenLine": "The smart contract does not absorb the disruption. It executes.",
+      "isFree": false
     },
     {
-      "id": "macro-exposure-q2",
-      "title": "Macro Exposure Report: Q2 2026",
-      "sector": "Macro",
-      "date": "April 2026",
-      "lede": "Five macro vectors currently active across tokenized private market sectors.",
-      "isFree": false,
-      "href": "#"
+      "id": "report-25-trillion",
+      "title": "The $2.5 Trillion Wall Blockchain Is Tearing Down",
+      "badge": "SECTOR INITIATION",
+      "date": "May 28, 2026",
+      "sector": "Trade Finance",
+      "lede": "Wall Street is tokenizing what is already liquid. The more consequential transformation is in the invoice books of agricultural co-operatives in Ecuador and the export ledgers of textile manufacturers in Peru.",
+      "foretokenLine": "Tokenization makes the invisible visible. In doing so, it makes the unfinanceable, financeable.",
+      "isFree": false
+    },
+    {
+      "id": "report-cartography",
+      "title": "The Cartography of Tokenisation",
+      "badge": "ANALYSIS",
+      "date": "May 27, 2026",
+      "sector": "Multi-Sector",
+      "lede": "Tokenization's first wave promised borderless capital. The architecture now emerging suggests the inverse: the importance of sovereign jurisdiction is intensifying, not diminishing.",
+      "foretokenLine": "The blockchain may settle the transaction. But the court still settles the claim.",
+      "isFree": false
+    },
+    {
+      "id": "report-analytical-framework",
+      "title": "Tokenized Private Markets: Why a New Analytical Framework Is Required",
+      "badge": "FRAMEWORK",
+      "date": "Apr 27, 2026",
+      "sector": "Multi-Sector",
+      "lede": "Traditional financial frameworks were not designed for assets sitting simultaneously across credit, transparency, liquidity, macro, and operational risk layers. The Foretoken five-pillar methodology is the response.",
+      "foretokenLine": "Is the yield durable? Are the claims enforceable? Can the structure withstand stress?",
+      "isFree": false
+    },
+    {
+      "id": "report-trade-finance-origination",
+      "title": "Trade Finance: Institutional Origination in the Tokenized Era",
+      "badge": "SECTOR INITIATION",
+      "date": "Apr 28, 2026",
+      "sector": "Trade Finance",
+      "lede": "Trade finance is one of the most important and least understood financial systems in the world. Tokenization does not change the need for trust, underwriting, or credit discernment — but it does modernize how those functions are delivered.",
+      "foretokenLine": "Trade finance is the financial plumbing of world trade. The hidden engine may not stay hidden much longer.",
+      "isFree": false
+    },
+    {
+      "id": "report-centrifuge-goldfinch",
+      "title": "Ratings Release: Centrifuge vs. Goldfinch",
+      "badge": "RATINGS RELEASE",
+      "date": "May 1, 2026",
+      "sector": "Private Credit",
+      "lede": "Two architectures, two information models. The most important distinction in tokenized private credit is not how credit is originated — it is how observable that credit truly is.",
+      "foretokenLine": "The question is no longer 'where is the yield?' It is 'can the underlying risk be clearly seen, measured, and verified?'",
+      "isFree": false
     }
   ],
 
@@ -186,7 +497,7 @@
       "status": "ELEVATED",
       "tier": "red",
       "note": "Baltic Dry Index elevated; container costs above 2024 baseline.",
-      "detail": "Global shipping costs remain elevated relative to 2024 baselines, driven by Red Sea route disruptions and port congestion in key EM hubs. Trade finance origination timelines have extended, and receivable cycle times for SME-focused protocols have increased materially. This is a secondary headwind for trade receivable ratings."
+      "detail": "Global shipping costs remain elevated relative to 2024 baselines, driven by Red Sea route disruptions and port congestion in key EM hubs. Trade finance origination timelines have extended, and receivable cycle times for SME-focused protocols have increased materially."
     },
     {
       "id": "commodities",
@@ -194,7 +505,7 @@
       "status": "VOLATILE",
       "tier": "amber",
       "note": "Agricultural commodity volatility elevated; metals range-bound.",
-      "detail": "Agricultural commodity prices have exhibited high volatility through Q2 2026, driven by El Niño-related weather disruptions in South America and Southeast Asia. Precious metals remain range-bound with gold serving as a credit floor for reserve-backed tokenized assets. The volatility backdrop is a primary driver of the BB− Agriculture sector rating."
+      "detail": "Agricultural commodity prices have exhibited high volatility through Q2 2026, driven by El Niño-related weather disruptions. Precious metals remain range-bound with gold serving as a credit floor for reserve-backed tokenized assets."
     },
     {
       "id": "fx-usd-em",
@@ -202,7 +513,7 @@
       "status": "WEAKENING",
       "tier": "amber",
       "note": "USD softening against EM basket; mixed impact by sector.",
-      "detail": "The US dollar has weakened approximately 4.2% against a basket of key emerging market currencies since January 2026. This is a net positive for USD-denominated EM borrowers (reduced repayment burden) but introduces FX mismatch risk for protocols with on-chain settlement in stablecoins pegged to USD. Mixed sector impact — favorable for trade finance, negative for real estate in USD-denominated markets."
+      "detail": "The US dollar has weakened approximately 4.2% against a basket of key emerging market currencies since January 2026. Net positive for USD-denominated EM borrowers but introduces FX mismatch risk for protocols with on-chain settlement in USD-pegged stablecoins."
     },
     {
       "id": "credit-spreads",
@@ -210,7 +521,7 @@
       "status": "STABLE",
       "tier": "green",
       "note": "Investment-grade spreads stable; HY spreads slightly compressed.",
-      "detail": "Investment-grade credit spreads have remained stable in a 95–115bps range over the past 60 days. High-yield spreads have compressed modestly, reflecting risk-on positioning in traditional markets. This is broadly supportive for tokenized credit assets with institutional origination, though the compression may mask underlying deterioration in weaker protocols not captured by aggregate spread indices."
+      "detail": "Investment-grade credit spreads have remained stable in a 95–115bps range over the past 60 days. High-yield spreads have compressed modestly, reflecting risk-on positioning in traditional markets."
     }
   ],
 
