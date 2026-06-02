@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import data from '../data/concourse.json';
 import PaywallGate from './PaywallGate';
 
@@ -16,24 +15,27 @@ export default function LatestDossiers({ isPremium, onSubscribe }) {
         </div>
 
         <div className="dossiers-grid">
-          {data.dossiers.map((dossier) => {
-            const locked = !dossier.isFree && !isPremium;
+          {data.intelligenceReports.map((report) => {
+            const locked = !report.isFree && !isPremium;
             return (
-              <div className="dossier-card" key={dossier.id} style={{ position: 'relative' }}>
+              <div className="dossier-card" key={report.id} style={{ position: 'relative' }}>
                 <div className="dossier-card__meta">
-                  <span className="dossier-card__sector">{dossier.sector}</span>
-                  <span className="dossier-card__date">{dossier.date}</span>
+                  <span className="dossier-card__sector">{report.badge}</span>
+                  <span className="dossier-card__date">{report.date}</span>
                 </div>
-                <h3 className="dossier-card__title">{dossier.title}</h3>
-                <p className="dossier-card__lede">{dossier.lede}</p>
+                <h3 className="dossier-card__title">{report.title}</h3>
+                <p className="dossier-card__lede">{report.lede}</p>
+                {report.foretokenLine && (
+                  <p style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic', marginTop: 8 }}>
+                    "{report.foretokenLine}"
+                  </p>
+                )}
 
-                {dossier.isFree ? (
-                  <Link to={dossier.href} className="dossier-card__link">
-                    Read →
-                  </Link>
+                {report.isFree ? (
+                  <span className="dossier-card__link">Read →</span>
                 ) : (
                   <span className="dossier-card__link" style={{ color: 'var(--text-muted)' }}>
-                    Subscribers only
+                    {isPremium ? 'Read →' : 'Subscribers only'}
                   </span>
                 )}
 
@@ -41,7 +43,7 @@ export default function LatestDossiers({ isPremium, onSubscribe }) {
                   <PaywallGate
                     isPremium={false}
                     onSubscribe={onSubscribe}
-                    message="This dossier is available to Concourse subscribers."
+                    message="This report is available to Concourse subscribers."
                   />
                 )}
               </div>
