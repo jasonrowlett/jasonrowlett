@@ -54,7 +54,7 @@ export default function SubscribeModal({ onClose }) {
             <div className="plan-card__price">
               $19<span style={{ fontSize: 14, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span>
             </div>
-            <div className="plan-card__price-note">or $190/yr — save 2 months</div>
+            <div className="plan-card__price-note">or $490/yr — save 2 months</div>
             <a href={MONTHLY_URL} className="plan-card__cta plan-card__cta--primary" target="_blank" rel="noopener noreferrer">
               Subscribe Monthly →
             </a>
@@ -64,7 +64,7 @@ export default function SubscribeModal({ onClose }) {
         <div className="subscribe-modal__annual">
           <span>Annual plan available —</span>
           <a href={ANNUAL_URL} target="_blank" rel="noopener noreferrer">
-            Subscribe Annually at $190/yr →
+            Subscribe Annually at $490/yr →
           </a>
         </div>
       </div>

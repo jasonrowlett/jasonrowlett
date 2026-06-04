@@ -62,7 +62,7 @@ export default function Subscribe() {
             <div className="plan-full-card__price">
               $19<span style={{ fontSize: 16, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span>
             </div>
-            <div className="plan-full-card__billing">or $190/yr — save 2 months</div>
+            <div className="plan-full-card__billing">or $490/yr — save 2 months</div>
             <hr className="plan-full-card__divider" />
             <div className="plan-full-card__features">
               {PREMIUM_FEATURES.map((f) => (
@@ -88,7 +88,7 @@ export default function Subscribe() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Subscribe Annually — $190/yr →
+              Subscribe Annually — $490/yr →
             </a>
           </div>
         </div>
