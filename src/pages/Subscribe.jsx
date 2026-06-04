@@ -60,7 +60,7 @@ export default function Subscribe() {
             <div className="plan-full-card__tier">Premium</div>
             <div className="plan-full-card__name">Foretoken Concourse</div>
             <div className="plan-full-card__price">
-              $19<span style={{ fontSize: 16, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span>
+              $49<span style={{ fontSize: 16, fontWeight: 400, color: 'var(--text-muted)' }}>/mo</span>
             </div>
             <div className="plan-full-card__billing">or $490/yr — save 2 months</div>
             <hr className="plan-full-card__divider" />
@@ -79,7 +79,7 @@ export default function Subscribe() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Subscribe Monthly — $19/mo →
+              Subscribe Monthly — $49/mo →
             </a>
             <a
               href={ANNUAL_URL}
