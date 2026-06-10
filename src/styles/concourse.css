@@ -212,6 +212,40 @@
 }
 
 .sector-card {
+  grid-column: span 2;
+}
+
+.sector-grid .sector-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.sector-grid .sector-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 1024px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .sector-grid {
+    grid-template-columns: 1fr;
+  }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+.sector-card {
   background: #111318;
   border: 0.5px solid #1e2028;
   border-radius: 4px;
