@@ -169,23 +169,45 @@
   color: #6b6a65;
 }
 
-/* ─── SectorGrid ────────────────────────────────────────────────────────────── */
+/* ─── SectorGrid ───────────────────────────────────────────────────────────── */
 
 .sector-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 12px;
+}
+
+.sector-grid .sector-card {
+  grid-column: span 2;
+}
+
+.sector-grid .sector-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.sector-grid .sector-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 @media (max-width: 1024px) {
   .sector-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 600px) {
   .sector-grid {
     grid-template-columns: 1fr;
+  }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
   }
 }
 
@@ -220,8 +242,9 @@
 
 .sector-card__rating {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
   flex-shrink: 0;
 }
 
@@ -241,6 +264,14 @@
 .outlook-symbol {
   font-size: 14px;
   line-height: 1;
+}
+
+.sector-card__outlook {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .sector-card__category {

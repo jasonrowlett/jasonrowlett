@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 import data from '../data/concourse.json';
 import SectorModal from './SectorModal';
 
+const SECTOR_DISPLAY_ORDER = [
+  'tokenized-treasuries',
+  'trade-finance',
+  'private-credit',
+  'precious-metals',
+  'real-estate',
+];
+
+const OUTLOOK_LABELS = {
+  stable: 'Stable',
+  positive: 'Positive',
+  negative: 'Negative',
+  watch: 'Watch',
+  constructive: 'Constructive',
+  cautious: 'Cautious',
+  developing: 'Developing',
+};
+
 function getRatingTier(rating) {
   const base = rating.replace(/[+\-−]/g, '');
   if (['AAA', 'AA', 'A'].includes(base)) return 'green';
@@ -26,6 +44,10 @@ function getOutlookSymbol(outlook) {
 export default function SectorGrid({ isPremium, onSubscribe }) {
   const [activeSector, setActiveSector] = useState(null);
 
+  const sectors = SECTOR_DISPLAY_ORDER
+    .map((id) => data.sectors.find((s) => s.id === id))
+    .filter(Boolean);
+
   return (
     <>
       <section className="section">
@@ -39,9 +61,10 @@ export default function SectorGrid({ isPremium, onSubscribe }) {
           </div>
 
           <div className="sector-grid">
-            {data.sectors.map((sector) => {
+            {sectors.map((sector) => {
               const tier = getRatingTier(sector.rating);
               const { symbol, color } = getOutlookSymbol(sector.outlook);
+              const outlookLabel = OUTLOOK_LABELS[sector.outlook] || sector.outlook;
               return (
                 <div
                   key={sector.id}
@@ -57,11 +80,11 @@ export default function SectorGrid({ isPremium, onSubscribe }) {
                     <div className="sector-card__rating">
                       <span className={`rating-badge rating-badge--${tier}`}>{sector.rating}</span>
                       <span
-                        className="outlook-symbol"
+                        className="sector-card__outlook"
                         style={{ color }}
-                        title={`Outlook: ${sector.outlook}`}
+                        title={`Outlook: ${outlookLabel}`}
                       >
-                        {symbol}
+                        {symbol} {outlookLabel}
                       </span>
                     </div>
                   </div>
