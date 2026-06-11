@@ -946,3 +946,258 @@
     align-items: flex-start;
   }
 }
+
+/* -- SectorGrid 3+2 layout -------------------------------------------------- */
+
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.sector-grid .sector-card {
+  grid-column: span 2;
+}
+
+.sector-grid .sector-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.sector-grid .sector-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 1024px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .sector-grid {
+    grid-template-columns: 1fr;
+  }
+  .sector-grid .sector-card,
+  .sector-grid .sector-card:nth-child(4),
+  .sector-grid .sector-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+.sector-card__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.sector-card__outlook {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* -- IntelModal ------------------------------------------------------------- */
+
+.sector-modal--intel {
+  max-width: 640px;
+}
+
+.intel-modal__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.intel-modal__badge {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 0.5px solid #B08A4A;
+  color: #B08A4A;
+  border-radius: 2px;
+}
+
+.intel-modal__date,
+.intel-modal__sector {
+  font-size: 11px;
+  color: #6b6a65;
+}
+
+.intel-modal__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e8e6e0;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+
+.intel-modal__summary {
+  font-size: 14px;
+  color: #6b6a65;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #1e2028;
+}
+
+.intel-modal__thesis {
+  padding: 12px 16px;
+  border-left: 2px solid #B08A4A;
+  margin-bottom: 24px;
+}
+
+.intel-modal__thesis p {
+  font-size: 13px;
+  color: #B08A4A;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.intel-modal__section {
+  margin-bottom: 22px;
+}
+
+.intel-modal__label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b6a65;
+  margin-bottom: 10px;
+}
+
+.intel-modal__takeaways {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intel-modal__takeaways li {
+  font-size: 13px;
+  color: #e8e6e0;
+  line-height: 1.55;
+  padding-left: 16px;
+  position: relative;
+}
+
+.intel-modal__takeaways li::before {
+  content: '--';
+  position: absolute;
+  left: 0;
+  color: #B08A4A;
+  font-size: 11px;
+  top: 2px;
+}
+
+.intel-modal__implications {
+  font-size: 13px;
+  color: #6b6a65;
+  line-height: 1.6;
+  padding: 12px 14px;
+  background: rgba(176, 138, 74, 0.06);
+  border: 0.5px solid rgba(176, 138, 74, 0.2);
+  border-radius: 3px;
+  margin: 0;
+}
+
+.intel-modal__cta {
+  padding-top: 20px;
+  border-top: 0.5px solid #1e2028;
+}
+
+/* -- Watchlist interactive styles ------------------------------------------ */
+
+.watchlist-item--interactive {
+  border-radius: 3px;
+  transition: background 0.12s;
+}
+
+.watchlist-item--interactive:hover {
+  background: rgba(176, 138, 74, 0.04);
+}
+
+.watchlist-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.watchlist-item__date {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6a65;
+  flex-shrink: 0;
+  padding-top: 2px;
+  opacity: 0.7;
+}
+
+.watchlist-item__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.watchlist-item__expand-btn {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #6b6a65;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.watchlist-item__expand-btn:hover {
+  color: #e8e6e0;
+}
+
+.watchlist-item__report-btn {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #B08A4A;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.12s;
+}
+
+.watchlist-item__report-btn:hover {
+  opacity: 0.7;
+}
+
+.watchlist-item__detail {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(176, 138, 74, 0.04);
+  border-left: 1px solid rgba(176, 138, 74, 0.25);
+  border-radius: 0 2px 2px 0;
+  font-size: 11px;
+  color: #6b6a65;
+  line-height: 1.65;
+}

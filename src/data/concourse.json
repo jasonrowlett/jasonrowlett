@@ -699,44 +699,68 @@
       {
         "name": "Real Estate Sector",
         "change": "BBB → BB-",
-        "note": "PMM liquidity stress and rate persistence"
+        "note": "PMM liquidity stress and rate persistence",
+        "dateUpdated": "Jun 2026",
+        "detail": "Rating lowered from BBB to BB- on deteriorating PMM liquidity depth, incomplete Lofty audit posture, and Blocksquare Oceanpoint TVL at $0. Adverse rate environment compresses transaction velocity and PMM staking yield simultaneously. Legal enforceability of on-chain property records remains untested through adversarial litigation.",
+        "reportId": "report-redemption-illusion"
       },
       {
         "name": "Trade Finance Sector",
         "change": "A- → BB+",
-        "note": "Hormuz crisis structural failure"
+        "note": "Hormuz crisis structural failure",
+        "dateUpdated": "May 2026",
+        "detail": "Downgraded from A- to BB+ following the Strait of Hormuz crisis. Fewer than 60 vessel transits in nearly three weeks exposed a structural gap: smart contract maturity logic cannot accommodate force majeure or physical disruption. $5.16B in tokenized credit affected. Outlook revised to Negative — architecture requires reform before investment-grade restoration.",
+        "reportId": "report-hormuz-limits"
       }
     ],
     "upgrades": [
       {
         "name": "Tokenized Treasuries",
         "change": "AA- (Stable)",
-        "note": "Fed pause reduces duration risk"
+        "note": "Fed pause reduces duration risk",
+        "dateUpdated": "Jun 2026",
+        "detail": "Rating confirmed at AA-, Stable following May 2026 Fed hold at 4.25–4.50%. Pause reduces near-term duration risk that had constrained the sector’s macro exposure score. OpenEden S&P AA+f fund credit quality rating reaffirmed. Primary risk remains custodial wrapper integrity, not sovereign credit quality.",
+        "reportId": null
       },
       {
         "name": "Maple Finance",
         "change": "BB+ → IG",
-        "note": "Overcollateralization discipline confirmed"
+        "note": "Overcollateralization discipline confirmed",
+        "dateUpdated": "May 2026",
+        "detail": "Upgraded to Investment Grade on sustained post-2022 overcollateralization discipline and institutional-grade operational rebuild. Borrower-level disclosure remains below investment-grade norms for the sector as a whole. Maple’s individual upgrade does not alter the Private Credit sector rating of BBB; it reflects protocol-level differentiation within the sector.",
+        "reportId": "report-centrifuge-goldfinch"
       }
     ],
     "underReview": [
       {
         "name": "TrueFi / Brila",
-        "note": "Transparency impairment; operational status unverifiable"
+        "note": "Transparency impairment; operational status unverifiable",
+        "dateUpdated": "Jun 2026",
+        "detail": "Placed Under Review — Negative Watch on documented transparency deterioration. Brila rebranding introduces additional verification complexity. Operational architecture is diffuse and difficult to independently map. Protocol governance structure and active borrower exposure cannot be confirmed from public disclosures. Review period: open.",
+        "reportId": "report-centrifuge-goldfinch"
       },
       {
         "name": "Blocksquare Oceanpoint",
-        "note": "Liquidity layer at $0 TVL"
+        "note": "Liquidity layer at $0 TVL",
+        "dateUpdated": "Jun 2026",
+        "detail": "Under Review — Negative Watch. Oceanpoint liquidity pool reporting $0 TVL on DefiLlama. Governance board activity stalled since May 2024. POINT token liquidity fix whitepaper published April 2025; not yet deployed to production. BST token at approximately $0.015 (~98% below ATH). Protocol functionality in question.",
+        "reportId": "report-redemption-illusion"
       }
     ],
     "liquidityWatch": [
       {
         "name": "Lofty (Real Estate)",
-        "note": "PMM yield sustainability under stress"
+        "note": "PMM yield sustainability under stress",
+        "dateUpdated": "Jun 2026",
+        "detail": "PMM staking pool yield is volume-dependent and procyclical — compresses simultaneously with property valuations in adverse rate environments. $100M deployed across 40,000 investors but per-property performance data remains undisclosed. 2022 CertiK engagement incomplete. PMM exit depth is property-specific; illiquid properties face thin pool conditions.",
+        "reportId": "report-redemption-illusion"
       },
       {
         "name": "Goldfinch (Private Credit)",
-        "note": "TVL at $1.32M, withdrawal queue active"
+        "note": "TVL at $1.32M, withdrawal queue active",
+        "dateUpdated": "Jun 2026",
+        "detail": "TVL declined from peak to $1.32M with an active withdrawal queue. Most transparent credit disclosure in the tokenized private credit sector, including a documented ~15% historical loss rate. Liquidity deterioration now the primary constraint — transparency premium cannot offset structural withdrawal pressure. Monitor for further TVL decline.",
+        "reportId": "report-centrifuge-goldfinch"
       }
     ]
   },
@@ -793,7 +817,7 @@
       "keyTakeaways": [
         "The ADB estimates a $2.5T annual trade finance gap concentrated in SME and emerging market borrowers excluded from conventional bank credit facilities.",
         "Tokenization reduces origination friction, enables fractional institutional participation, and creates programmable settlement infrastructure for assets that were previously too small or opaque to finance.",
-        "The most consequential deployment of tokenized trade finance is not competing with institutional bank facilities — it is reaching the borrower those facilities will never serve.",
+        "The most consequential deployment of tokenized trade finance is not competing with JP Morgan’s institutional facilities — it is reaching the Ecuadorian agricultural co-operative that JP Morgan will never serve.",
         "Current sector architecture (Polytrade, Centrifuge trade pools) demonstrates the model but carries material borrower-level opacity and force majeure gaps that constrain near-term ratings.",
         "Long-term sector potential is among the highest in tokenized finance. Near-term rating (BB+, Negative) reflects architectural immaturity, not the sector’s ultimate trajectory."
       ],
@@ -832,7 +856,7 @@
       "foretokenLine": "Is the yield durable? Are the claims enforceable? Can the structure withstand stress?",
       "keyTakeaways": [
         "Traditional fixed income and equity frameworks do not map onto tokenized RWAs — the risk surface is multi-dimensional in ways conventional analysis was not designed to evaluate.",
-        "The Five-Pillar Scorecard evaluates Credit Quality, Transparency, Liquidity, Macro Exposure, and Operational Integrity as independent dimensions, each scored 1–5.",
+        "The Five-Pillar Scorecard evaluates Credit Quality, Transparency, Liquidity, Macro Exposure, and Operational Integrity as independent dimensions — each scored 1–5.",
         "A single pillar at score 1 or 2 can constrain a sector or protocol rating regardless of strength elsewhere. Liquidity is the most frequent binding constraint across covered sectors.",
         "Opacity is not a neutral characteristic in unsecured private lending. It is the risk. Transparency scoring reflects the absence of disclosure as a substantive credit impairment.",
         "Every Foretoken rating is backed by publicly available or disclosed data. No rating relies on undisclosed information or management guidance."
@@ -855,7 +879,7 @@
         "Short-duration, self-liquidating structure is the sector’s primary structural advantage: loans repay when invoices are settled, providing natural liquidity rhythm under normal conditions.",
         "The $2.5T annual financing gap (ADB) is concentrated in SME and EM borrowers — the structural opportunity tokenization is best positioned to address.",
         "Borrower-level disclosure is absent across covered protocols. Blockchain improves how capital moves; it does not automatically improve how credit risk is assessed.",
-        "Polytrade (pure-play origination, AIG insurance, Mastercard/Chainlink) and Centrifuge (multi-asset infrastructure, variable pool quality) represent the two dominant architectural approaches."
+        "Polytrade (pure-play origination, AIG insurance, Mastercard/Chainlink partnerships) and Centrifuge (multi-asset infrastructure, variable pool quality) represent the two dominant architectural approaches."
       ],
       "ratingImplications": "This initiation established Trade Finance at BB+ with Stable outlook on strong structural characteristics offset by disclosure gaps. Subsequent Hormuz crisis alert (May 21, 2026) revised outlook to Negative on demonstrated architectural failure under geopolitical stress.",
       "beehiivUrl": "https://foretoken.beehiiv.com/p/trade-finance-institutional-origination-tokenized-era",
