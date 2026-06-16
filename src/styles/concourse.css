@@ -37,19 +37,45 @@
 
 .macro-banner__inner {
   display: flex;
+  align-items: center;
   white-space: nowrap;
-  animation: marquee 60s linear infinite;
+  animation: marquee 120s linear infinite;
 }
 
 .macro-banner__inner:hover {
   animation-play-state: paused;
 }
 
-.macro-banner__text {
+.macro-banner__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
   font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+.macro-banner__headline {
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-size: 10px;
+}
+
+.macro-banner__dash {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.macro-banner__detail {
   color: #6b6a65;
-  padding-right: 80px;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+}
+
+.macro-banner__sep {
+  color: var(--accent);
+  font-size: 7px;
+  padding: 0 20px;
+  opacity: 0.6;
 }
 
 @keyframes marquee {
