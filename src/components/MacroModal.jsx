@@ -19,13 +19,13 @@ export default function MacroModal({ item, onClose }) {
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="sector-modal sector-modal--intel sector-modal--macro" role="dialog" aria-modal="true" aria-labelledby="macro-modal-title">
         <div className="sector-modal__header">
-          <button className="sector-modal__close" onClick={onClose} aria-label="Close">&times;</button>
+          <button className="sector-modal__close" onClick={onClose} aria-label="Close">×</button>
         </div>
 
         <div className="sector-modal__body">
           <div className="intel-modal__meta">
             <span className={`macro-modal__status macro-modal__status--${item.tier}`}>{item.status}</span>
-            <span className="intel-modal__date">Active Signal &middot; June 2026</span>
+            <span className="intel-modal__date">Active Signal · June 2026</span>
           </div>
 
           <h2 id="macro-modal-title" className="intel-modal__title">{item.label}</h2>

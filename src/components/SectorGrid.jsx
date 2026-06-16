@@ -6,6 +6,7 @@ const SECTOR_DISPLAY_ORDER = [
   'tokenized-treasuries',
   'trade-finance',
   'private-credit',
+  'tokenized-equities',
   'precious-metals',
   'real-estate',
 ];

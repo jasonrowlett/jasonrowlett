@@ -11,21 +11,21 @@ export default function Footer() {
             Independent ratings and intelligence for tokenized private markets.
           </p>
           <nav className="footer-col__nav" aria-label="Footer navigation">
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
             <a href="mailto:info@foretoken.xyz">Contact</a>
             <Link to="/subscribe">Subscribe</Link>
-            <Link to="/">Privacy</Link>
-            <Link to="/">Terms</Link>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/terms">Terms</Link>
           </nav>
         </div>
 
         <div>
           <div className="footer-col__heading">Research</div>
           <nav className="footer-col__nav" aria-label="Research navigation">
-            <Link to="/">Intelligence Archive</Link>
-            <Link to="/">Sector Ratings</Link>
-            <Link to="/">Watchlist</Link>
-            <Link to="/">Methodology</Link>
+            <Link to="/intelligence">Intelligence Archive</Link>
+            <Link to="/ratings">Sector Ratings</Link>
+            <Link to="/watchlist">Watchlist</Link>
+            <Link to="/methodology">Methodology</Link>
           </nav>
         </div>
 
@@ -44,11 +44,11 @@ export default function Footer() {
       <div className="site-footer__bottom">
         <div className="container">
           <span className="site-footer__copyright">
-            &copy; 2026 Foretoken &middot; foretoken.xyz &middot; Austin, Texas
+            © 2026 Foretoken · foretoken.xyz · Austin, Texas
           </span>
           <nav style={{ display: 'flex', gap: 16 }} aria-label="Legal links">
-            <Link to="/" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Privacy</Link>
-            <Link to="/" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Terms</Link>
+            <Link to="/privacy" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Privacy</Link>
+            <Link to="/terms" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Terms</Link>
           </nav>
         </div>
       </div>

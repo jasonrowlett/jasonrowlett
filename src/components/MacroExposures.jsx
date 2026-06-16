@@ -28,7 +28,7 @@ export default function MacroExposures() {
                 className="macro-exposure__toggle"
                 onClick={() => setActiveItem(item)}
               >
-                View Detail &rarr;
+                View Detail →
               </button>
             </div>
           ))}
