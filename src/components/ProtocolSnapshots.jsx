@@ -12,7 +12,7 @@ const PILLAR_LABELS = {
 };
 
 function getRatingColor(rating) {
-  const base = rating.replace(/[+\-\u2212]/g, '');
+  const base = rating.replace(/[+\-−]/g, '');
   if (['AAA', 'AA', 'A'].includes(base)) return 'var(--green)';
   if (base === 'BBB') return 'var(--accent)';
   if (base === 'BB') return 'var(--amber)';

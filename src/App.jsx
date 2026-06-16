@@ -12,6 +12,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Intelligence from './pages/Intelligence';
+import Ratings from './pages/Ratings';
+import WatchlistPage from './pages/WatchlistPage';
 
 export default function App() {
   return (
@@ -30,6 +33,9 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/intelligence" element={<Intelligence />} />
+          <Route path="/ratings" element={<Ratings />} />
+          <Route path="/watchlist" element={<WatchlistPage />} />
         </Routes>
       </main>
       <Footer />
