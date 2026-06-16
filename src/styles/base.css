@@ -72,8 +72,9 @@ button {
   --bg:           #0a0b0d;
   --surface:      #111318;
   --border:       #1e2028;
-  --text-primary: #e8e6e0;
-  --text-muted:   #6b6a65;
+  --text-primary:    #e8e6e0;
+  --text-secondary:  #a8a5a0;
+  --text-muted:      #8a8783;
   --gold:         #B08A4A;
   --green:        #1a9e6e;
   --amber:        #c47d15;

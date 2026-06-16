@@ -5,8 +5,8 @@
   top: 0;
   z-index: 100;
   background: #0a0b0d;
-  border-bottom: 0.5px solid #1e2028;
-  height: 32px;
+  border-bottom: 1px solid #252830;
+  height: 36px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -14,13 +14,13 @@
 
 .macro-banner__label {
   flex-shrink: 0;
-  padding: 0 14px;
+  padding: 0 16px;
   font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: #2a6dd9;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #4a8de8;
   text-transform: uppercase;
-  border-right: 0.5px solid #1e2028;
+  border-right: 1px solid #252830;
   height: 100%;
   display: flex;
   align-items: center;
@@ -56,26 +56,26 @@
 
 .macro-banner__headline {
   color: var(--text-primary);
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 11px;
 }
 
 .macro-banner__dash {
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .macro-banner__detail {
-  color: #6b6a65;
-  font-size: 11px;
+  color: var(--text-secondary);
+  font-size: 12px;
 }
 
 .macro-banner__sep {
   color: var(--accent);
-  font-size: 7px;
-  padding: 0 20px;
-  opacity: 0.6;
+  font-size: 8px;
+  padding: 0 22px;
+  opacity: 0.75;
 }
 
 @keyframes marquee {
@@ -120,7 +120,7 @@
 
 .site-header__tagline {
   font-size: 10px;
-  color: #6b6a65;
+  color: var(--text-muted);
   letter-spacing: 0.04em;
 }
 
@@ -132,7 +132,7 @@
 
 .site-header__nav a {
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-muted);
   letter-spacing: 0.04em;
   transition: color 0.15s;
 }
@@ -178,7 +178,7 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.16em;
-  color: #6b6a65;
+  color: var(--text-muted);
   text-transform: uppercase;
   margin-bottom: 6px;
 }
@@ -192,7 +192,7 @@
 
 .section-header__sub {
   font-size: 13px;
-  color: #6b6a65;
+  color: var(--text-muted);
 }
 
 /* ─── SectorGrid ────────────────────────────────────────────────── */
@@ -282,13 +282,13 @@
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .sector-card__rationale {
   font-size: 13px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.55;
   margin-bottom: 14px;
 }
@@ -351,7 +351,7 @@
 
 .sector-modal__close {
   font-size: 20px;
-  color: #6b6a65;
+  color: var(--text-muted);
   line-height: 1;
   padding: 4px 8px;
   cursor: pointer;
@@ -381,7 +381,7 @@
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 8px;
 }
 
@@ -401,7 +401,7 @@
 
 .sector-modal__rationale {
   font-size: 14px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 28px;
   padding-top: 16px;
@@ -418,7 +418,7 @@
 
 .sector-modal__paywall p {
   font-size: 13px;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 14px;
 }
 
@@ -469,7 +469,7 @@
 .intel-modal__date,
 .intel-modal__sector {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-muted);
 }
 
 .intel-modal__title {
@@ -482,7 +482,7 @@
 
 .intel-modal__summary {
   font-size: 14px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -512,7 +512,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
@@ -544,7 +544,7 @@
 
 .intel-modal__implications {
   font-size: 13px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.6;
   padding: 12px 14px;
   background: rgba(176, 138, 74, 0.06);
@@ -593,7 +593,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   padding-left: 10px;
   margin-bottom: 16px;
   padding-bottom: 10px;
@@ -630,7 +630,7 @@
 
 .watchlist-item__note {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.45;
 }
 
@@ -656,7 +656,7 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   flex-shrink: 0;
   padding-top: 2px;
   opacity: 0.7;
@@ -673,7 +673,7 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: #6b6a65;
+  color: var(--text-muted);
   background: none;
   border: none;
   padding: 0;
@@ -708,7 +708,7 @@
   border-left: 1px solid rgba(176, 138, 74, 0.25);
   border-radius: 0 2px 2px 0;
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
@@ -733,7 +733,7 @@
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-muted);
 }
 
 .watchlist-locked__icon {
@@ -853,7 +853,7 @@
 
 .dossier-card__date {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-muted);
 }
 
 .dossier-card__title {
@@ -866,7 +866,7 @@
 
 .dossier-card__lede {
   font-size: 13px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.55;
   margin-bottom: 16px;
 }
@@ -912,7 +912,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 8px;
 }
 
@@ -932,7 +932,7 @@
 
 .macro-exposure__note {
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 12px;
 }
@@ -959,7 +959,7 @@
   padding-top: 12px;
   border-top: 0.5px solid #1e2028;
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
@@ -1037,7 +1037,7 @@
 
 .footer-col__tagline {
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -1050,7 +1050,7 @@
 
 .footer-col__nav a {
   font-size: 12px;
-  color: #6b6a65;
+  color: var(--text-muted);
   transition: color 0.15s;
 }
 
@@ -1063,7 +1063,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6b6a65;
+  color: var(--text-muted);
   margin-bottom: 14px;
 }
 
@@ -1089,19 +1089,19 @@
 
 .rating-scale-item__def {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-muted);
 }
 
 .footer-col__disclaimer {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 12px;
 }
 
 .footer-col__legal {
   font-size: 10px;
-  color: #6b6a65;
+  color: var(--text-muted);
   line-height: 1.6;
   opacity: 0.7;
 }
@@ -1122,7 +1122,7 @@
 
 .site-footer__copyright {
   font-size: 11px;
-  color: #6b6a65;
+  color: var(--text-muted);
   letter-spacing: 0.02em;
 }
 
