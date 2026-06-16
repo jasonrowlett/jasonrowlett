@@ -270,7 +270,7 @@
       "ticker": "ONDO / OUSG",
       "sector": "tokenized-treasuries",
       "sectorLabel": "Tokenized Treasuries",
-      "rating": "IG",
+      "rating": "BBB+",
       "ratingLabel": "Investment Grade",
       "outlook": "stable",
       "summary": "Tokenized U.S. Treasury exposure through fund structures. One of the most institutionally sophisticated protocols in tokenized finance. Token holders own fund units, not Treasury bills.",
@@ -303,7 +303,7 @@
       "ticker": "TBILL",
       "sector": "tokenized-treasuries",
       "sectorLabel": "Tokenized Treasuries",
-      "rating": "IG+",
+      "rating": "A-",
       "ratingLabel": "Investment Grade — Strong",
       "outlook": "stable",
       "summary": "98.7% short-duration Treasuries, 40.8-day WAM. S&P 'AA+f' Fund Credit Quality Rating. BNY Mellon custody. Redemption is operator-mediated, not autonomous.",
@@ -336,8 +336,8 @@
       "ticker": "USDM",
       "sector": "tokenized-treasuries",
       "sectorLabel": "Tokenized Treasuries",
-      "rating": "WD",
-      "ratingLabel": "Wind-Down",
+      "rating": "BB-",
+      "ratingLabel": "Wind-Down — Anchorage Transition",
       "outlook": "negative",
       "summary": "Bermuda-regulated yield-bearing stablecoin backed by short-duration Treasuries. Initiated formal wind-down; Anchorage Digital acquisition in process. Documentation remains the sector transparency benchmark.",
       "pillars": {
@@ -369,8 +369,8 @@
       "ticker": "SYRUP / MPL",
       "sector": "private-credit",
       "sectorLabel": "Private Credit",
-      "rating": "IG",
-      "ratingLabel": "Investment Grade — Moderate",
+      "rating": "BBB",
+      "ratingLabel": "Investment Grade",
       "outlook": "stable",
       "summary": "Rebuilt around overcollateralized institutional lending post-2022. AUM $516M to $4.59B in 2025. Sub-5-minute withdrawals reported. Stress durability through adverse crypto cycle untested.",
       "pillars": {
@@ -402,7 +402,7 @@
       "ticker": "TRU",
       "sector": "private-credit",
       "sectorLabel": "Private Credit",
-      "rating": "UR",
+      "rating": "CCC",
       "ratingLabel": "Under Review — Transparency Impaired",
       "outlook": "negative",
       "summary": "Pioneer of unsecured on-chain institutional lending. Legacy architecture now obscures current operational status. Dashboards load; data does not populate. The central risk is not confirmed default — it is the impossibility of ruling it out.",
@@ -435,8 +435,8 @@
       "ticker": "CFG",
       "sector": "private-credit",
       "sectorLabel": "Private Credit",
-      "rating": "IG",
-      "ratingLabel": "Investment Grade Preliminary — Under Review",
+      "rating": "BBB-",
+      "ratingLabel": "Investment Grade — Preliminary",
       "outlook": "stable",
       "summary": "One of the most established RWA infrastructure protocols. $476.2M in active pools across private credit, trade finance, CLO exposure, and structured products. Token value accrual mechanism remains economically ambiguous.",
       "pillars": {
@@ -468,8 +468,8 @@
       "ticker": "GFI",
       "sector": "private-credit",
       "sectorLabel": "Private Credit",
-      "rating": "MOD",
-      "ratingLabel": "Moderate — Observable Credit Risk",
+      "rating": "BB",
+      "ratingLabel": "Observable Credit Risk",
       "outlook": "negative",
       "summary": "Borrower-driven lending with highest observable transparency in peer set. Deal-level disclosure of repayments, restructurings, and defaults. Active loans ~$51M. Reported historical loss rate ~15%.",
       "pillars": {
@@ -724,7 +724,7 @@
       },
       {
         "name": "Maple Finance",
-        "change": "BB+ → IG",
+        "change": "BB+ → BBB",
         "note": "Overcollateralization discipline confirmed",
         "dateUpdated": "May 2026",
         "detail": "Upgraded to Investment Grade on sustained post-2022 overcollateralization discipline and institutional-grade operational rebuild. Borrower-level disclosure remains below investment-grade norms for the sector as a whole. Maple’s individual upgrade does not alter the Private Credit sector rating of BBB; it reflects protocol-level differentiation within the sector.",
@@ -913,7 +913,16 @@
       "status": "ELEVATED",
       "tier": "red",
       "note": "Fed funds rate held at 4.25–4.50%; long-end yields stabilizing.",
-      "detail": "The Federal Reserve maintained its target range at 4.25–4.50% following the May 2026 meeting, citing persistent services inflation and resilient labor markets. Long-duration tokenized assets face continued valuation pressure. Duration risk remains a primary factor in sector ratings for real estate and infrastructure debt."
+      "detail": "The Federal Reserve maintained its target range at 4.25–4.50% following the May 2026 meeting, citing persistent services inflation and resilient labor markets. Long-duration tokenized assets face continued valuation pressure. Duration risk remains a primary factor in sector ratings for real estate and infrastructure debt.",
+      "whyItMatters": "Federal Reserve policy is the primary macro variable for tokenized fixed income. Rates above 4% sustain demand for tokenized Treasury products while simultaneously compressing transaction velocity in rate-sensitive sectors. The current plateau — held for the third consecutive meeting — reduces near-term duration risk but leaves refinancing stress unresolved across private credit and real estate.",
+      "sectorsAffected": [
+        "Tokenized Treasuries",
+        "Private Credit",
+        "Real Estate",
+        "Trade Finance"
+      ],
+      "currentSignal": "Fed funds rate held at 4.25–4.50% at the May 2026 FOMC meeting. Long-end Treasury yields have stabilized in the 4.3–4.6% range. Services CPI remains above target. Fed communications indicate no rate cuts before Q4 2026 at the earliest. Forward curve pricing in 1–2 cuts through year-end.",
+      "ratingImplications": "Positive for Tokenized Treasuries (AA-, Stable) — rate pause removes near-term duration headwind. Constrains Real Estate (BB-, Negative) — elevated mortgage rates suppress transaction velocity and PMM staking yield. Private Credit (BBB, Stable) — rate persistence maintains relative yield advantage for overcollateralized lending protocols."
     },
     {
       "id": "shipping-indices",
@@ -921,7 +930,13 @@
       "status": "ELEVATED",
       "tier": "red",
       "note": "Baltic Dry Index elevated; container costs above 2024 baseline.",
-      "detail": "Global shipping costs remain elevated relative to 2024 baselines, driven by Red Sea route disruptions and port congestion in key EM hubs. Trade finance origination timelines have extended, and receivable cycle times for SME-focused protocols have increased materially."
+      "detail": "Global shipping costs remain elevated relative to 2024 baselines, driven by Red Sea route disruptions and port congestion in key EM hubs. Trade finance origination timelines have extended, and receivable cycle times for SME-focused protocols have increased materially.",
+      "whyItMatters": "Tokenized trade finance is directly dependent on physical logistics infrastructure. Elevated shipping costs extend invoice settlement cycles, compress SME borrower margins, and strain the self-liquidating structure that gives trade finance its primary structural advantage. When cargo moves slower, credit cycles lengthen — and deterministic smart contract maturity windows cannot flex to accommodate it.",
+      "sectorsAffected": [
+        "Trade Finance"
+      ],
+      "currentSignal": "Baltic Dry Index remains elevated versus the 2024 baseline. Container spot rates on Asia–Europe lanes are 35–45% above pre-disruption levels. Red Sea rerouting via Cape of Good Hope adds 10–14 days to shipping timelines. Port congestion in Singapore and Rotterdam elevated. Strait of Hormuz transit volumes partially recovering following April–May 2026 crisis.",
+      "ratingImplications": "Compounding factor in the Trade Finance sector downgrade to BB+, Negative. Extended logistics timelines increase the likelihood of maturity mismatches between smart contract settlement windows and real-world invoice settlement. Polytrade and Centrifuge trade pools are the primary exposed protocols. Architecture reform — including grace period provisions — is required before the sector can return to investment grade."
     },
     {
       "id": "commodities",
@@ -929,7 +944,15 @@
       "status": "VOLATILE",
       "tier": "amber",
       "note": "Agricultural commodity volatility elevated; metals range-bound.",
-      "detail": "Agricultural commodity prices have exhibited high volatility through Q2 2026, driven by El Niño-related weather disruptions. Precious metals remain range-bound with gold serving as a credit floor for reserve-backed tokenized assets."
+      "detail": "Agricultural commodity prices have exhibited high volatility through Q2 2026, driven by El Niño-related weather disruptions. Precious metals remain range-bound with gold serving as a credit floor for reserve-backed tokenized assets.",
+      "whyItMatters": "Commodity price volatility affects tokenized private markets through two separate channels: agricultural volatility stresses EM SME borrowers in trade finance and private credit pools, while gold and silver price movements directly affect the collateral value of reserve-backed tokenized precious metal products. The two effects operate in opposite directions and across different sectors.",
+      "sectorsAffected": [
+        "Trade Finance",
+        "Precious Metals",
+        "Private Credit"
+      ],
+      "currentSignal": "Agricultural commodities: high volatility through Q2 2026 driven by El Niño precipitation disruptions in Southeast Asia and South America. Corn, wheat, and soy futures exhibiting 20–30% intramonth swings. Gold: range-bound at $2,280–$2,420/oz. Silver: similar range-bound pattern. BRICS+ central bank gold accumulation continues at the fastest pace since post-Bretton Woods.",
+      "ratingImplications": "Supports Precious Metals (BBB, Positive) — gold price floor provides collateral stability for LBMA-backed XAUm; BRICS+ accumulation trend reinforces the reserve infrastructure thesis. Creates headwinds for Trade Finance SME borrowers with agricultural exposure — repayment capacity at risk when commodity prices fall below hedging levels. Limited direct impact on Private Credit sector rating but increases EM borrower stress in Goldfinch pools."
     },
     {
       "id": "fx-usd-em",
@@ -937,7 +960,14 @@
       "status": "WEAKENING",
       "tier": "amber",
       "note": "USD softening against EM basket; mixed impact by sector.",
-      "detail": "The US dollar has weakened approximately 4.2% against a basket of key emerging market currencies since January 2026. Net positive for USD-denominated EM borrowers but introduces FX mismatch risk for protocols with on-chain settlement in USD-pegged stablecoins."
+      "detail": "The US dollar has weakened approximately 4.2% against a basket of key emerging market currencies since January 2026. Net positive for USD-denominated EM borrowers but introduces FX mismatch risk for protocols with on-chain settlement in USD-pegged stablecoins.",
+      "whyItMatters": "Most tokenized private credit and trade finance protocols denominate loans and repayments in USD-pegged stablecoins. When the USD weakens against EM currencies, borrowers in those economies receive effectively cheaper capital — improving repayment capacity. But the same dynamic creates FX mismatch risk for protocols that must deliver USD-denominated returns to investors while borrowers generate local-currency revenues.",
+      "sectorsAffected": [
+        "Trade Finance",
+        "Private Credit"
+      ],
+      "currentSignal": "USD index (DXY) down approximately 4.2% since January 2026. INR -2.21% vs USD through April 2026 — directly relevant to Polytrade’s SME borrower base. BRL, IDR, and MXN showing mixed performance. USD weakness driven by softening U.S. economic data and reduced Fed hawkishness. Reversal risk elevated if services inflation re-accelerates.",
+      "ratingImplications": "Net positive for EM borrowers in USD-denominated trade finance facilities — improved local-currency repayment capacity. Creates FX mismatch risk for Polytrade (INR-denominated SME revenues versus USD-denominated stablecoin obligations). Goldfinch EM credit pools face similar dynamics in their respective borrower geographies. Directionally neutral to Private Credit sector rating (BBB, Stable) at current levels but reversal risk is a latent constraint."
     },
     {
       "id": "credit-spreads",
@@ -945,7 +975,14 @@
       "status": "STABLE",
       "tier": "green",
       "note": "Investment-grade spreads stable; HY spreads slightly compressed.",
-      "detail": "Investment-grade credit spreads have remained stable in a 95–115bps range over the past 60 days. High-yield spreads have compressed modestly, reflecting risk-on positioning in traditional markets."
+      "detail": "Investment-grade credit spreads have remained stable in a 95–115bps range over the past 60 days. High-yield spreads have compressed modestly, reflecting risk-on positioning in traditional markets.",
+      "whyItMatters": "Conventional credit spreads set the risk-free-rate-plus-spread baseline that tokenized private credit products must compete against. Stable IG spreads support institutional demand for tokenized fixed income alternatives. Compressed HY spreads reduce the relative yield premium available from tokenized private credit — the primary driver of institutional interest in the sector.",
+      "sectorsAffected": [
+        "Tokenized Treasuries",
+        "Private Credit"
+      ],
+      "currentSignal": "Investment-grade credit spreads stable in 95–115bps range over the past 60 days. High-yield spreads compressed modestly to 285–310bps range, reflecting risk-on positioning in traditional credit markets. CLO formation activity remains elevated. No significant credit events in leveraged finance market through Q2 2026.",
+      "ratingImplications": "Neutral to positive for Tokenized Treasuries (AA-, Stable) — stable IG spread environment supports institutional demand for short-duration sovereign alternatives. Mildly negative for Private Credit (BBB, Stable) — compressed HY spreads reduce the relative yield premium that makes tokenized private credit compelling to institutional allocators. No direct rating action warranted at current levels."
     }
   ],
   "ratingScale": [

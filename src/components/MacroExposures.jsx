@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import data from '../data/concourse.json';
+import MacroModal from './MacroModal';
 
 export default function MacroExposures() {
-  const [expanded, setExpanded] = useState({});
-
-  const toggle = (id) => {
-    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+  const [activeItem, setActiveItem] = useState(null);
 
   return (
     <section className="section" style={{ paddingTop: 0 }}>
@@ -29,24 +26,21 @@ export default function MacroExposures() {
               <p className="macro-exposure__note">{item.note}</p>
               <button
                 className="macro-exposure__toggle"
-                onClick={() => toggle(item.id)}
-                aria-expanded={!!expanded[item.id]}
-                aria-controls={`macro-detail-${item.id}`}
+                onClick={() => setActiveItem(item)}
               >
-                {expanded[item.id] ? 'Hide Detail' : 'Show Detail'}
+                View Detail &rarr;
               </button>
-              {expanded[item.id] && (
-                <div
-                  className="macro-exposure__detail"
-                  id={`macro-detail-${item.id}`}
-                >
-                  {item.detail}
-                </div>
-              )}
             </div>
           ))}
         </div>
       </div>
+
+      {activeItem && (
+        <MacroModal
+          item={activeItem}
+          onClose={() => setActiveItem(null)}
+        />
+      )}
     </section>
   );
 }

@@ -11,12 +11,21 @@ export default function Footer() {
             Independent ratings and intelligence for tokenized private markets.
           </p>
           <nav className="footer-col__nav" aria-label="Footer navigation">
-            <Link to="/">Methodology</Link>
             <Link to="/">About</Link>
             <a href="mailto:info@foretoken.xyz">Contact</a>
+            <Link to="/subscribe">Subscribe</Link>
             <Link to="/">Privacy</Link>
             <Link to="/">Terms</Link>
-            <Link to="/subscribe">Subscribe</Link>
+          </nav>
+        </div>
+
+        <div>
+          <div className="footer-col__heading">Research</div>
+          <nav className="footer-col__nav" aria-label="Research navigation">
+            <Link to="/">Intelligence Archive</Link>
+            <Link to="/">Sector Ratings</Link>
+            <Link to="/">Watchlist</Link>
+            <Link to="/">Methodology</Link>
           </nav>
         </div>
 
@@ -25,13 +34,17 @@ export default function Footer() {
             Foretoken Concourse ratings are independent analytical opinions and do not constitute
             investment advice. Foretoken is not a registered investment adviser.
           </p>
+          <p className="footer-col__legal">
+            Ratings reflect publicly available information as of the date of publication.
+            Coverage is limited to protocols reviewed by the Foretoken editorial team.
+          </p>
         </div>
       </div>
 
       <div className="site-footer__bottom">
         <div className="container">
           <span className="site-footer__copyright">
-            © 2026 Foretoken · foretoken.xyz · Austin, Texas
+            &copy; 2026 Foretoken &middot; foretoken.xyz &middot; Austin, Texas
           </span>
           <nav style={{ display: 'flex', gap: 16 }} aria-label="Legal links">
             <Link to="/" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Privacy</Link>

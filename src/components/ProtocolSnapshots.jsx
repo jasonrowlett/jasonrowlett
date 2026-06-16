@@ -12,10 +12,10 @@ const PILLAR_LABELS = {
 };
 
 function getRatingColor(rating) {
-  if (['IG+', 'IG'].includes(rating)) return 'var(--green)';
-  if (rating.startsWith('BBB')) return 'var(--accent)';
-  if (rating.startsWith('BB')) return 'var(--amber)';
-  if (['WD', 'UR', 'MOD'].includes(rating)) return 'var(--text-muted)';
+  const base = rating.replace(/[+\-\u2212]/g, '');
+  if (['AAA', 'AA', 'A'].includes(base)) return 'var(--green)';
+  if (base === 'BBB') return 'var(--accent)';
+  if (base === 'BB') return 'var(--amber)';
   return 'var(--red)';
 }
 

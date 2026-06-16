@@ -1201,3 +1201,44 @@
   color: #6b6a65;
   line-height: 1.65;
 }
+
+/* --- MacroModal ------------------------------------------------------------ */
+
+.sector-modal--macro {
+  max-width: 620px;
+}
+
+.macro-modal__status {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.macro-modal__status--red   { background: rgba(196,64,64,0.15);   color: #c44040; border: 0.5px solid rgba(196,64,64,0.3); }
+.macro-modal__status--amber { background: rgba(196,125,21,0.15);  color: #c47d15; border: 0.5px solid rgba(196,125,21,0.3); }
+.macro-modal__status--green { background: rgba(26,158,110,0.15);  color: #1a9e6e; border: 0.5px solid rgba(26,158,110,0.3); }
+
+.macro-modal__sectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.macro-modal__sector-tag {
+  font-size: 11px;
+  padding: 2px 9px;
+  background: rgba(176, 138, 74, 0.08);
+  border: 0.5px solid rgba(176, 138, 74, 0.2);
+  border-radius: 2px;
+  color: #B08A4A;
+}
+
+.macro-modal__signal {
+  font-size: 13px;
+  color: #e8e6e0;
+  line-height: 1.65;
+  margin: 0;
+}
