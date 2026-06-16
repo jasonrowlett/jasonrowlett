@@ -1,5 +1,18 @@
 {
-  "macroBanner": "MACRO SIGNAL — Fed held at 4.25–4.50% in May 2026 · Treasury yields stabilizing · USD weakening vs. EM basket · Tokenized RWA TVL: $68.4B · Shipping indices elevated · Agricultural commodity volatility: HIGH",
+  "tickerItems": [
+    "TRADE FINANCE DOWNGRADED TO BB+ — Transparency and geopolitical dependency remain structural concerns",
+    "PRECIOUS METALS OUTLOOK REVISED POSITIVE — Sovereign reserve accumulation continues supporting demand",
+    "TOKENIZED TREASURIES MAINTAIN AA- — Institutional adoption remains strongest among RWA sectors",
+    "TRUEFI REMAINS UNDER REVIEW — Operational transparency concerns unresolved",
+    "REAL ESTATE OUTLOOK NEGATIVE — Secondary liquidity remains fragmented",
+    "PRIVATE CREDIT OUTLOOK STABLE — Covenant discipline and seasoned managers support current BB+ rating",
+    "TOKENIZED RWA MARKET VALUE: $68.4B",
+    "FED HOLDS AT 4.25%–4.50%",
+    "BALTIC DRY INDEX REMAINS ELEVATED",
+    "USD WEAKENING VS. EM BASKET",
+    "TREASURY YIELDS STABILIZING",
+    "AGRICULTURAL COMMODITY VOLATILITY: HIGH"
+  ],
   "lastUpdated": "June 2026",
   "sectors": [
     {
