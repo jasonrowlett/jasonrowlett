@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import MacroBanner from './components/MacroBanner';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -19,6 +20,7 @@ import WatchlistPage from './pages/WatchlistPage';
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <MacroBanner />
       <Header />
       <main style={{ flex: 1 }}>
